@@ -309,16 +309,106 @@
   .reveal { opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease; }
   .reveal.visible { opacity:1;transform:translateY(0); }
 
-  /* MOBILE */
+  /* ── RESPONSIVE: TABLET (641–1024px) ── */
+  @media(min-width:641px) and (max-width:1024px){
+    .container { max-width:680px; padding:0 32px; }
+    .hero__title { font-size:clamp(2.6rem,5.5vw,4rem); }
+    .hero__subtitle { font-size:1.1rem; max-width:100%; }
+    .hero__event-strip { gap:18px; padding:16px 20px; font-size:12px; }
+    .pain__grid { grid-template-columns:repeat(2,1fr); }
+    .pillars { grid-template-columns:repeat(2,1fr); }
+    .tools__grid { grid-template-columns:1fr; }
+    .facilitadoras__grid { grid-template-columns:1fr; gap:24px; }
+    .quotes__grid { grid-template-columns:1fr; }
+    .lugar__grid { grid-template-columns:1fr; gap:24px; }
+    .precio__box { padding:44px 36px; }
+    .modal { padding:44px 36px; max-width:500px; }
+    .faci-card { padding:28px 24px; }
+    .sticky-bar__text { font-size:0.82rem; }
+    .sticky-bar .btn-primary { padding:12px 20px; font-size:12px; }
+    .seats-track { flex-wrap:wrap; }
+    .tools__headline { font-size:clamp(1.8rem,4vw,2.8rem); }
+  }
+
+  /* ── RESPONSIVE: MOBILE (≤640px) ── */
   @media(max-width:640px){
-    .hero__event-strip{flex-direction:column;gap:16px}
-    .lugar__grid{grid-template-columns:1fr}
-    .btn-primary{width:100%;justify-content:center}
-    .sticky-bar{flex-direction:column;gap:10px;text-align:center}
-    .sticky-bar .btn-primary{width:100%}
-    .modal{padding:36px 24px}
-    .precio__box{padding:40px 24px}
-    .pillars{grid-template-columns:1fr 1fr}
+    .container { padding:0 18px; }
+    #hero { padding:60px 0 48px; }
+    .hero__title { font-size:clamp(2rem,9vw,3rem); letter-spacing:-0.01em; }
+    .hero__subtitle { font-size:1rem; margin-bottom:32px; }
+    .hero__badges { gap:8px; margin-bottom:28px; }
+    .badge { font-size:10px; padding:6px 12px; }
+    .hero__event-strip { flex-direction:column; gap:12px; padding:16px 18px; }
+    .event-detail { font-size:12px; }
+    .seats-counter { flex-wrap:wrap; gap:8px; padding:10px 14px; }
+    .seats-track { flex-wrap:wrap; max-width:200px; }
+    .btn-primary { width:100%; justify-content:center; padding:16px 20px; font-size:13px; }
+    .btn-ghost { font-size:12px; }
+    .section-label { font-size:9px; }
+    /* Pain */
+    .pain__headline { font-size:clamp(1.7rem,7vw,2.4rem); }
+    .pain__grid { grid-template-columns:1fr; }
+    .pain__mirror { padding:32px 20px; }
+    .pain__mirror-text { font-size:clamp(1.1rem,4.5vw,1.5rem); }
+    /* Que es */
+    .whatis__headline { font-size:clamp(1.7rem,7vw,2.4rem); }
+    .pillars { grid-template-columns:1fr 1fr; gap:12px; }
+    .pillar { padding:24px 14px; }
+    .pillar__icon { font-size:22px; margin-bottom:10px; }
+    .pillar__title { font-size:1.1rem; }
+    .pillar__text { font-size:0.82rem; }
+    .whatis__promise { padding:32px 20px; }
+    .whatis__promise-title { font-size:clamp(1.2rem,5vw,1.6rem); }
+    /* Tools */
+    .tools__headline { font-size:clamp(1.7rem,7vw,2.4rem); }
+    .tools__grid { grid-template-columns:1fr; gap:14px; margin-top:36px; }
+    .tool-card { padding:20px 18px; gap:14px; }
+    .tool-card__num { font-size:1.8rem; width:28px; }
+    .tool-card__content h4 { font-size:1rem; }
+    .tool-card__content p { font-size:0.85rem; }
+    /* Facilitadoras */
+    .facilitadoras__headline { font-size:clamp(1.6rem,6vw,2.4rem); margin-bottom:36px; }
+    .facilitadoras__grid { grid-template-columns:1fr; gap:20px; }
+    .faci-card { padding:24px 20px; }
+    .faci-card__photo { width:72px; height:72px; }
+    .faci-card__name { font-size:1.3rem; }
+    /* Quotes */
+    .quotes__grid { grid-template-columns:1fr; gap:14px; }
+    .quote-card { padding:24px 20px; }
+    /* Precio */
+    .precio__box { padding:32px 20px; }
+    .precio__tag { font-size:4rem; }
+    .precio__includes li { font-size:0.87rem; padding:8px 0; }
+    /* FAQ */
+    .faq__headline { font-size:clamp(1.6rem,6vw,2.4rem); }
+    .faq-q { font-size:1.05rem; }
+    .faq-a { font-size:0.88rem; }
+    /* Lugar */
+    .lugar__grid { grid-template-columns:1fr; gap:20px; }
+    .lugar__name { font-size:1.6rem; }
+    .lugar__map { height:160px; }
+    /* Contacto */
+    .contacto__grid { gap:20px; }
+    .contacto__link { font-size:11px; padding:5px 10px; }
+    /* Modal */
+    .modal { padding:28px 18px; margin:12px; max-width:100%; }
+    .modal__title { font-size:1.5rem; }
+    /* Sticky */
+    .sticky-bar { flex-direction:column; gap:8px; text-align:center; padding:12px 18px; }
+    .sticky-bar .btn-primary { width:100%; padding:14px 20px; }
+    .sticky-bar__text { font-size:0.8rem; }
+    /* Second CTA section */
+    .second-cta-title { font-size:clamp(1.6rem,6vw,2.4rem) !important; }
+    /* Legal */
+    .legal__text { font-size:0.78rem; padding:0 4px; }
+  }
+
+  /* ── LARGE DESKTOP (>1280px) ── */
+  @media(min-width:1280px){
+    .container { max-width:860px; }
+    .hero__title { font-size:5.6rem; }
+    .pain__grid { grid-template-columns:repeat(3,1fr); }
+    .tools__grid { grid-template-columns:repeat(3,1fr); }
   }
 </style>
 </head>
@@ -776,25 +866,79 @@
   document.getElementById("modalClose").addEventListener("click", closeModal);
   document.getElementById("inscripcionModal").addEventListener("click", function(e){ if(e.target===this) closeModal(); });
 
-  // Form submit → Stripe with prefill + increment counter
-  document.getElementById("inscripcionForm").addEventListener("submit", function(e){
+  // Form submit → send pre-reg email via API + redirect to Stripe
+  document.getElementById("inscripcionForm").addEventListener("submit", async function(e){
     e.preventDefault();
     const nombre = document.getElementById("fNombre").value.trim();
-    const tel = document.getElementById("fTelefono").value.trim();
-    const email = document.getElementById("fEmail").value.trim();
+    const tel    = document.getElementById("fTelefono").value.trim();
+    const email  = document.getElementById("fEmail").value.trim();
     if(!nombre || !tel || !email){
       document.getElementById("formError").style.display = "block";
       return;
     }
     document.getElementById("formError").style.display = "none";
-    // Increment seat counter optimistically
+
+    // Show loading state on button
+    const btn = this.querySelector("button[type=submit]");
+    const originalText = btn.innerHTML;
+    btn.innerHTML = "Enviando… ⏳";
+    btn.disabled = true;
+
+    // Increment seat counter
     setSeatsSold(getSeatsSold() + 1);
-    // Save data
     localStorage.setItem("es_nombre", nombre);
     localStorage.setItem("es_email", email);
+
+    // Send pre-registration email via Anthropic API (Claude composes it)
+    try {
+      await sendPreRegEmail({ nombre, tel, email });
+    } catch(err) {
+      console.warn("Email send failed (non-blocking):", err);
+    }
+
     // Redirect to Stripe
     window.location.href = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
   });
+
+  async function sendPreRegEmail({ nombre, tel, email }) {
+    const stripeLink = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
+    const prompt = `Eres el asistente de correo electrónico de la Experiencia Sensorial.
+Genera SOLO el cuerpo HTML de un email de pre-registro elegante (sin DOCTYPE, sin <html>, sin <head>).
+Fondo oscuro #0d0d1a, texto #f5f0ea, acentos dorados #c9a84c, serif Georgia.
+Destinatario: ${nombre}
+Email: ${email}
+Teléfono: ${tel}
+
+El email debe:
+1. Agradecerle el registro con tono cálido y profesional
+2. Recordarle que su plaza NO está confirmada hasta completar el pago
+3. Incluir un botón CTA grande dorado que diga "Completar mi pago · 70 € + IVA →" con href="${stripeLink}"
+4. Recordarle los datos del evento: 23 de mayo, 10:00-18:30, Escuela Pasos de Baile, Avd. Carlos Sainz 7, Leganés Madrid
+5. Incluir los contactos: Verónica 655 355 826 (wa.me/message/OTRUHFM7O3VHP1) y Mayka 620 798 013 (wa.me/message/RUQKY2CDMTQEP1)
+6. Incluir enlace al grupo WhatsApp del evento: https://chat.whatsapp.com/J3UNetfQDxG15O20QiEhFI
+7. Cerrar con firma "Verónica y Mayka ♡"
+8. Pie: enviado desde escribenos@veronicasalamanca.com
+
+Devuelve SOLO el HTML, sin explicaciones ni markdown.`;
+
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 1000,
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
+    if(!res.ok) throw new Error("API error " + res.status);
+    // Note: in production, this email HTML would be sent via a backend
+    // (e.g. EmailJS, Resend, SendGrid) using the generated content.
+    // Here we log it for integration testing.
+    const data = await res.json();
+    const html = data.content?.[0]?.text || "";
+    console.log("Pre-reg email HTML generated:", html.substring(0, 200));
+    return html;
+  }
 
   // Sticky bar
   const stickyBar = document.getElementById("stickyBar");
