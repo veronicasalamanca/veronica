@@ -866,56 +866,86 @@
   document.getElementById("modalClose").addEventListener("click", closeModal);
   document.getElementById("inscripcionModal").addEventListener("click", function(e){ if(e.target===this) closeModal(); });
 
-  // ── GOOGLE APPS SCRIPT CONFIG ─────────────────────────────────────────
-  // Pega aquí la URL que obtienes al publicar el script como Web App:
-  const GAS_URL = "https://script.google.com/macros/s/AKfycbyi3ct6jC6J4qlNEJV-MzgaKLO3jVOlENVws9-Cg2j0j84cV95lAB9mwyp0MVydzXbI/exec";
-  // (Formato: https://script.google.com/macros/s/XXXX.../exec)
+  // ── GOOGLE APPS SCRIPT ────────────────────────────────────────────────
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbxQTPQGD_suu2wdPF45DslF-ihI6Wnv69W1EtmJm8Ad3JjBWXDkcYynXl0P-mUxwfQJ/exec";
 
-  // Form submit → Google Apps Script → emails + redirect a Stripe
+  // ── VALIDACIÓN EN TIEMPO REAL ──────────────────────────────────────────
+  ["fNombre","fTelefono","fEmail"].forEach(id => {
+    document.getElementById(id).addEventListener("input", function(){
+      this.style.borderColor = this.value.trim() ? "rgba(201,168,76,0.5)" : "";
+      document.getElementById("formError").style.display = "none";
+    });
+  });
+
+  // ── SUBMIT ─────────────────────────────────────────────────────────────
   document.getElementById("inscripcionForm").addEventListener("submit", async function(e){
     e.preventDefault();
+
     const nombre = document.getElementById("fNombre").value.trim();
     const tel    = document.getElementById("fTelefono").value.trim();
     const email  = document.getElementById("fEmail").value.trim();
-    if(!nombre || !tel || !email){
-      document.getElementById("formError").style.display = "block";
+    const errEl  = document.getElementById("formError");
+
+    // Validación
+    if (!nombre || !tel || !email) {
+      errEl.textContent = "Por favor rellena todos los campos.";
+      errEl.style.display = "block";
       return;
     }
-    document.getElementById("formError").style.display = "none";
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailOk) {
+      errEl.textContent = "Introduce un email válido.";
+      errEl.style.display = "block";
+      document.getElementById("fEmail").focus();
+      return;
+    }
+    const telOk = /^[0-9\s\+\-]{7,15}$/.test(tel);
+    if (!telOk) {
+      errEl.textContent = "Introduce un teléfono válido.";
+      errEl.style.display = "block";
+      document.getElementById("fTelefono").focus();
+      return;
+    }
+    errEl.style.display = "none";
 
+    // Estado: enviando
     const btn = this.querySelector("button[type=submit]");
-    btn.innerHTML = "Enviando… ⏳";
+    btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;justify-content:center;">'+
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 0.8s linear infinite">'+
+      '<path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>'+
+      'Guardando tu plaza…</span>';
     btn.disabled = true;
 
+    // Contadores y datos
     setSeatsSold(getSeatsSold() + 1);
     localStorage.setItem("es_nombre", nombre);
     localStorage.setItem("es_email", email);
-
     const stripeLink = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
 
+    // Llamada al Google Apps Script (fire-and-forget con no-cors)
     try {
-      // Llamada al Google Apps Script (no-cors porque GAS no devuelve CORS headers)
-      // El script recibe los datos, envía los emails y anota en la Sheet — todo en paralelo
       fetch(GAS_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          nombre,
-          email,
+          nombre, email,
           telefono: tel,
           stripeLink,
-          plazasVendidas: getSeatsSold(),
+          plazasVendidas:  getSeatsSold(),
           plazasRestantes: TOTAL_SEATS - getSeatsSold()
         })
       });
-      // No esperamos respuesta (no-cors) — el script actúa de forma asíncrona
     } catch(err) {
       console.warn("GAS call failed (non-blocking):", err);
     }
 
-    // Redirigir a Stripe inmediatamente (no esperamos al script)
-    window.location.href = stripeLink;
+    // Mensaje de éxito antes de redirigir
+    btn.innerHTML = '✓ ¡Listo! Ahora te llevamos al pago…';
+    btn.style.background = "linear-gradient(135deg,#3a9e5f,#5cc87a)";
+
+    // Pequeña pausa para que lea el mensaje, luego Stripe
+    setTimeout(() => { window.location.href = stripeLink; }, 1400);
   });
 
   // Sticky bar
