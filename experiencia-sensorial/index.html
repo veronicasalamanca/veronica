@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experiencia Sensorial · 23 de Mayo · Leganés, Madrid</title>
+<title>Experiencia Sensorial · 6 de Junio · Leganés, Madrid</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -447,7 +447,7 @@
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   <div class="container">
-    <p class="hero__eyebrow fade-up">Una jornada para ti · 23 de Mayo · Madrid</p>
+    <p class="hero__eyebrow fade-up">Una jornada para ti · 6 de Junio · Madrid</p>
     <h1 class="hero__title fade-up fade-up--delay-1">
       Tu cuerpo lleva demasiado tiempo<br>
       <em>en modo supervivencia.</em>
@@ -462,7 +462,7 @@
       <span class="badge">Cuerpo + Mente</span>
     </div>
     <div class="hero__event-strip fade-up fade-up--delay-3">
-      <div class="event-detail">📅 Fecha: <span>23 de mayo</span></div>
+      <div class="event-detail">📅 Fecha: <span>6 de junio</span></div>
       <div class="event-detail">🕙 Horario: <span>10:00 – 18:30</span></div>
       <div class="event-detail">📍 Leganés, Madrid</div>
       <div class="event-detail">◈ Solo <span>25 plazas</span></div>
@@ -725,7 +725,7 @@
 <section style="padding:80px 0;background:radial-gradient(ellipse 100% 80% at 50% 50%,#1a0f2e 0%,var(--night) 70%);">
   <div class="container text-center">
     <h2 style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:20px;" class="reveal">
-      ¿Y si este 23 de mayo<br><span class="italic rose">lo dedicas por completo a ti?</span>
+      ¿Y si este 6 de junio<br><span class="italic rose">lo dedicas por completo a ti?</span>
     </h2>
     <p style="color:var(--muted);max-width:440px;margin:0 auto 40px;font-size:0.95rem;" class="reveal">
       No para arreglarte. No porque estés rota.<br>
@@ -787,7 +787,7 @@
     <span class="footer__logo">Experiencia Sensorial</span>
     <p class="footer__tagline">No es solo parar. Es aprender a volver a ti.</p>
     <p class="footer__contact">
-      23 de Mayo · Leganés, Madrid ·
+      6 de Junio · Leganés, Madrid ·
       <a href="https://instagram.com/escuelapasosdebaile">@escuelapasosdebaile</a>
     </p>
   </div>
@@ -796,7 +796,7 @@
 <!-- STICKY BAR -->
 <div class="sticky-bar" id="stickyBar">
   <div class="sticky-bar__text">
-    <strong>Experiencia Sensorial · 23 Mayo</strong>
+    <strong>Experiencia Sensorial · 6 Junio</strong>
     <span>Leganés, Madrid · 10:00–18:30 · Solo 25 plazas</span>
   </div>
   <button class="btn-primary" onclick="openModal()">Reservar · 70 € + IVA →</button>
@@ -866,7 +866,12 @@
   document.getElementById("modalClose").addEventListener("click", closeModal);
   document.getElementById("inscripcionModal").addEventListener("click", function(e){ if(e.target===this) closeModal(); });
 
-  // Form submit → send pre-reg email via API + redirect to Stripe
+  // ── GOOGLE APPS SCRIPT CONFIG ─────────────────────────────────────────
+  // Pega aquí la URL que obtienes al publicar el script como Web App:
+  const GAS_URL = "TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI";
+  // (Formato: https://script.google.com/macros/s/XXXX.../exec)
+
+  // Form submit → Google Apps Script → emails + redirect a Stripe
   document.getElementById("inscripcionForm").addEventListener("submit", async function(e){
     e.preventDefault();
     const nombre = document.getElementById("fNombre").value.trim();
@@ -878,67 +883,40 @@
     }
     document.getElementById("formError").style.display = "none";
 
-    // Show loading state on button
     const btn = this.querySelector("button[type=submit]");
-    const originalText = btn.innerHTML;
     btn.innerHTML = "Enviando… ⏳";
     btn.disabled = true;
 
-    // Increment seat counter
     setSeatsSold(getSeatsSold() + 1);
     localStorage.setItem("es_nombre", nombre);
     localStorage.setItem("es_email", email);
 
-    // Send pre-registration email via Anthropic API (Claude composes it)
+    const stripeLink = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
+
     try {
-      await sendPreRegEmail({ nombre, tel, email });
+      // Llamada al Google Apps Script (no-cors porque GAS no devuelve CORS headers)
+      // El script recibe los datos, envía los emails y anota en la Sheet — todo en paralelo
+      fetch(GAS_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre,
+          email,
+          telefono: tel,
+          stripeLink,
+          plazasVendidas: getSeatsSold(),
+          plazasRestantes: TOTAL_SEATS - getSeatsSold()
+        })
+      });
+      // No esperamos respuesta (no-cors) — el script actúa de forma asíncrona
     } catch(err) {
-      console.warn("Email send failed (non-blocking):", err);
+      console.warn("GAS call failed (non-blocking):", err);
     }
 
-    // Redirect to Stripe
-    window.location.href = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
+    // Redirigir a Stripe inmediatamente (no esperamos al script)
+    window.location.href = stripeLink;
   });
-
-  async function sendPreRegEmail({ nombre, tel, email }) {
-    const stripeLink = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
-    const prompt = `Eres el asistente de correo electrónico de la Experiencia Sensorial.
-Genera SOLO el cuerpo HTML de un email de pre-registro elegante (sin DOCTYPE, sin <html>, sin <head>).
-Fondo oscuro #0d0d1a, texto #f5f0ea, acentos dorados #c9a84c, serif Georgia.
-Destinatario: ${nombre}
-Email: ${email}
-Teléfono: ${tel}
-
-El email debe:
-1. Agradecerle el registro con tono cálido y profesional
-2. Recordarle que su plaza NO está confirmada hasta completar el pago
-3. Incluir un botón CTA grande dorado que diga "Completar mi pago · 70 € + IVA →" con href="${stripeLink}"
-4. Recordarle los datos del evento: 23 de mayo, 10:00-18:30, Escuela Pasos de Baile, Avd. Carlos Sainz 7, Leganés Madrid
-5. Incluir los contactos: Verónica 655 355 826 (wa.me/message/OTRUHFM7O3VHP1) y Mayka 620 798 013 (wa.me/message/RUQKY2CDMTQEP1)
-6. Incluir enlace al grupo WhatsApp del evento: https://chat.whatsapp.com/J3UNetfQDxG15O20QiEhFI
-7. Cerrar con firma "Verónica y Mayka ♡"
-8. Pie: enviado desde escribenos@veronicasalamanca.com
-
-Devuelve SOLO el HTML, sin explicaciones ni markdown.`;
-
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 1000,
-        messages: [{ role: "user", content: prompt }]
-      })
-    });
-    if(!res.ok) throw new Error("API error " + res.status);
-    // Note: in production, this email HTML would be sent via a backend
-    // (e.g. EmailJS, Resend, SendGrid) using the generated content.
-    // Here we log it for integration testing.
-    const data = await res.json();
-    const html = data.content?.[0]?.text || "";
-    console.log("Pre-reg email HTML generated:", html.substring(0, 200));
-    return html;
-  }
 
   // Sticky bar
   const stickyBar = document.getElementById("stickyBar");
