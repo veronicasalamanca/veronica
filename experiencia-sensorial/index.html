@@ -867,7 +867,7 @@
   document.getElementById("inscripcionModal").addEventListener("click", function(e){ if(e.target===this) closeModal(); });
 
   // ── GOOGLE APPS SCRIPT ────────────────────────────────────────────────
-  const GAS_URL = "https://script.google.com/macros/s/AKfycbxQTPQGD_suu2wdPF45DslF-ihI6Wnv69W1EtmJm8Ad3JjBWXDkcYynXl0P-mUxwfQJ/exec";
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbx0l5k7XJiqNtS3Fs5-gnJYP7t1nj6TLa4aA7lXazWZBG4jtzDs8kt5TEoWE0p6jYG2/exec";
 
   // ── VALIDACIÓN EN TIEMPO REAL ──────────────────────────────────────────
   ["fNombre","fTelefono","fEmail"].forEach(id => {
@@ -922,19 +922,20 @@
     localStorage.setItem("es_email", email);
     const stripeLink = STRIPE_URL + "?prefilled_email=" + encodeURIComponent(email);
 
-    // Llamada al Google Apps Script (fire-and-forget con no-cors)
+    // Llamada al Google Apps Script via form-urlencoded (único método
+    // que funciona de forma fiable con GAS en modo no-cors)
     try {
+      var params = new URLSearchParams();
+      params.append("nombre",          nombre);
+      params.append("email",           email);
+      params.append("telefono",        tel);
+      params.append("stripeLink",      stripeLink);
+      params.append("plazasVendidas",  getSeatsSold());
+      params.append("plazasRestantes", TOTAL_SEATS - getSeatsSold());
       fetch(GAS_URL, {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nombre, email,
-          telefono: tel,
-          stripeLink,
-          plazasVendidas:  getSeatsSold(),
-          plazasRestantes: TOTAL_SEATS - getSeatsSold()
-        })
+        body: params
       });
     } catch(err) {
       console.warn("GAS call failed (non-blocking):", err);
