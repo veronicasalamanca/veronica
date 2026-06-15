@@ -3,702 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prevenza | Dirección operativa y preventiva para empresas</title>
-  <meta
-    name="description"
-    content="Prevenza integra administración, coordinación operativa, prevención, CAE y estructura empresarial para pymes y empresas industriales."
-  />
+  <title>Prevenza | Dirección operativa, administración y PRL para empresas</title>
+  <meta name="description" content="Prevenza: consultoría de prevención de riesgos laborales, administración, coordinación CAE y dirección operativa para pymes españolas. Presupuesto a medida en 48h." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.veronicasalamanca.com/prevenza/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Verónica Salamanca" />
-  <meta property="og:title" content="Prevenza | Dirección operativa y preventiva para empresas" />
-  <meta property="og:description" content="Administración, coordinación operativa, prevención, CAE y estructura empresarial para pymes y empresas industriales." />
+  <meta property="og:title" content="Prevenza | Dirección operativa y PRL para empresas" />
+  <meta property="og:description" content="Orden, control y rentabilidad para pymes que necesitan estructura real en administración, prevención de riesgos laborales y coordinación operativa." />
   <meta property="og:url" content="https://www.veronicasalamanca.com/prevenza/" />
   <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Prevenza | Dirección operativa y preventiva para empresas" />
-  <meta name="twitter:description" content="Administración, coordinación operativa, prevención, CAE y estructura empresarial para pymes y empresas industriales." />
+  <meta name="twitter:title" content="Prevenza | Dirección operativa y PRL para empresas" />
+  <meta name="twitter:description" content="Orden, control y rentabilidad para pymes que necesitan estructura real en administración, prevención y coordinación operativa." />
   <meta name="twitter:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
 
+  <link rel="icon" type="image/png" href="/images/Logo%20Visual.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Prevenza",
+    "provider": { "@type": "Person", "name": "Verónica Salamanca" },
+    "description": "Consultoría de dirección operativa, administración, prevención de riesgos laborales y coordinación CAE para pymes españolas.",
+    "url": "https://www.veronicasalamanca.com/prevenza/",
+    "areaServed": { "@type": "Country", "name": "España" },
+    "serviceType": ["Prevención de Riesgos Laborales", "Dirección Operativa", "Administración de Empresas", "Coordinación CAE"]
+  }
+  </script>
 
   <style>
-    :root {
-      --green-900: #667b73;
-      --green-800: #7f938a;
-      --mint-500: #a7c6b7;
-      --mint-300: #dbe9e2;
-      --lilac-500: #b9b0c8;
-      --lilac-300: #e7e2ef;
-      --gold-500: #c5a94e;
-      --cream-50: #faf8f4;
-      --cream-100: #f3eee7;
-      --sand-200: #e7ddd1;
-      --text-900: #181818;
-      --text-700: #4e4e4e;
-      --text-500: #7a7a7a;
-      --white: #ffffff;
-      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
-      --shadow-card: 0 12px 26px rgba(24, 24, 24, 0.07);
-      --radius-xl: 32px;
-      --radius-lg: 22px;
-      --max: 1240px;
+    .prl-nota {
+      background: rgba(167,198,183,0.12);
+      border-left: 4px solid var(--mint-500);
+      padding: 18px 22px;
+      border-radius: 0 14px 14px 0;
+      margin: 24px 0;
     }
+    .prl-nota strong { color: var(--green-900); }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: "Montserrat", system-ui, sans-serif;
-      color: var(--text-900);
-      background: var(--cream-50);
-      line-height: 1.55;
-    }
-
-    body.menu-open { overflow: hidden; }
-
-    img {
-      max-width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 2rem));
-      margin: 0 auto;
-    }
-
-    .section { padding: 84px 0; }
-    .section-tight { padding: 62px 0; }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(167, 198, 183, 0.18);
-      color: var(--green-900);
-      font-size: 0.84rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3, .nav-links, .dropdown-menu a, .mobile-nav a, .mobile-submenu summary {
-      font-family: "Cinzel", serif;
-      letter-spacing: -0.02em;
-      line-height: 1.02;
-      margin: 0 0 16px;
-    }
-
-    h1 { font-size: clamp(2.8rem, 6vw, 5.2rem); }
-    h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
-    h3 { font-size: clamp(1.25rem, 2vw, 1.9rem); }
-
-    p {
-      margin: 0 0 16px;
-      color: var(--text-700);
-      font-size: 1rem;
-    }
-
-    .lead { font-size: 1.08rem; }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+    .normativa-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
       margin-top: 28px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: var(--green-900);
-      color: var(--white);
-      box-shadow: var(--shadow-card);
-    }
-
-    .btn-secondary {
-      background: var(--gold-500);
-      color: var(--white);
-      box-shadow: var(--shadow-card);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      border-color: rgba(102, 123, 115, 0.22);
-      color: var(--green-900);
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(102, 123, 115, 0.98);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      min-height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-    }
-
-    .logo img { width: 180px; height: auto; }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: var(--white);
-      font-size: 0.96rem;
-      margin: 0;
-    }
-
-    .nav-links > a,
-    .dropdown-toggle {
-      color: var(--white);
-      font-weight: 500;
-      cursor: pointer;
-      background: none;
-      border: none;
-      font: inherit;
-      padding: 0;
-    }
-
-    .has-dropdown {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    .dropdown-toggle::after {
-      content: "▾";
-      margin-left: 8px;
-      font-size: 0.78rem;
-      font-family: sans-serif;
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 14px);
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 320px;
-      background: var(--white);
-      border-radius: 18px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(102,123,115,0.12);
-      padding: 14px;
-      display: none;
-      z-index: 1200;
-    }
-
-    .has-dropdown.open .dropdown-menu { display: block; }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 12px;
-      border-radius: 12px;
-      color: var(--green-900);
-      font-size: 0.96rem;
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    .dropdown-menu a span {
-      display: block;
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.84rem;
-      color: var(--text-500);
-      margin-top: 5px;
-      line-height: 1.4;
-    }
-
-    .dropdown-menu a:hover { background: var(--cream-100); }
-
-    .mobile-toggle {
-      display: none;
-      width: 48px;
-      height: 48px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: transparent;
-      border-radius: 14px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      padding: 0;
-      position: relative;
-    }
-
-    .mobile-toggle span,
-    .mobile-toggle::before,
-    .mobile-toggle::after {
-      content: "";
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 99px;
-      transition: transform .25s ease, opacity .25s ease;
-      position: absolute;
-    }
-
-    .mobile-toggle span { transform: translateY(0); }
-    .mobile-toggle::before { transform: translateY(-7px); }
-    .mobile-toggle::after { transform: translateY(7px); }
-
-    .mobile-toggle.active span { opacity: 0; }
-    .mobile-toggle.active::before { transform: rotate(45deg); }
-    .mobile-toggle.active::after { transform: rotate(-45deg); }
-
-    .mobile-panel {
-      display: none;
-      position: fixed;
-      inset: 76px 0 0 0;
-      background: rgba(250, 248, 244, 0.98);
-      backdrop-filter: blur(10px);
-      z-index: 1100;
-      overflow-y: auto;
-      border-top: 1px solid rgba(102, 123, 115, 0.12);
-      padding: 18px 0 24px;
-    }
-
-    .mobile-panel.open { display: block; }
-
-    .mobile-nav {
-      width: min(var(--max), calc(100% - 1.2rem));
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .mobile-nav > a,
-    .mobile-submenu summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--white);
-      color: var(--green-900);
-      border: 1px solid rgba(102, 123, 115, 0.12);
-      border-radius: 16px;
-      padding: 16px 18px;
-      font-size: 1.05rem;
-      box-shadow: var(--shadow-card);
-      margin: 0;
-    }
-
-    .mobile-submenu summary {
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .mobile-submenu summary::-webkit-details-marker { display: none; }
-
-    .mobile-submenu[open] summary {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    .mobile-submenu-links {
-      background: var(--white);
-      border: 1px solid rgba(102,123,115,0.12);
-      border-top: 0;
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
-      padding: 6px 10px 12px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .mobile-submenu-links a {
-      display: block;
-      padding: 12px 10px;
-      border-radius: 12px;
-      color: var(--green-900);
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.96rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .mobile-submenu-links a + a { margin-top: 4px; }
-    .mobile-submenu-links a:hover { background: var(--cream-100); }
-
-    .mobile-contact-row {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at top left, rgba(167,198,183,0.14), transparent 28%),
-        linear-gradient(180deg, #faf8f4 0%, #f2ece4 100%);
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.04fr 0.96fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .hero-photo {
-      width: 100%;
-      border-radius: var(--radius-xl);
-      object-fit: cover;
-      box-shadow: var(--shadow-soft);
-      aspect-ratio: 4 / 5;
-    }
-
-    .hero-aside {
-      position: relative;
-    }
-
-    .hero-logo-card {
-      position: absolute;
-      right: -18px;
-      bottom: 24px;
-      background: rgba(255,255,255,0.94);
-      border-radius: 22px;
-      box-shadow: var(--shadow-card);
-      padding: 14px;
-      width: 130px;
-    }
-
-    .hero-logo-card img {
-      width: 100%;
-      max-width: 90px;
-      margin: 0 auto;
-    }
-
-    .hero-points,
-    .service-grid,
-    .why-grid,
-    .path-grid,
-    .proof-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .hero-points { grid-template-columns: repeat(3, 1fr); }
-    .service-grid { grid-template-columns: repeat(4, 1fr); }
-    .why-grid { grid-template-columns: repeat(4, 1fr); }
-    .path-grid { grid-template-columns: repeat(3, 1fr); }
-    .proof-grid { grid-template-columns: repeat(3, 1fr); }
-
-    .point,
-    .service-card,
-    .why-card,
-    .path-card,
-    .proof-card {
+    .normativa-card {
       background: var(--white);
       border-radius: var(--radius-lg);
       border: 1px solid rgba(102,123,115,0.08);
-      padding: 24px;
       box-shadow: var(--shadow-card);
+      padding: 22px;
     }
 
-    .point strong {
-      display: block;
-      color: var(--green-900);
-      margin-bottom: 6px;
-      font-size: 0.94rem;
-    }
-
-    .point p { margin: 0; font-size: 0.9rem; }
-
-    .section-head {
-      max-width: 900px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .section-head p {
-      max-width: 820px;
-      margin: 0 auto 14px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(167,198,183,0.18);
-      color: var(--green-900);
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: 16px;
-    }
-
-    .service-card.featured {
-      border: 1px solid rgba(102,123,115,0.22);
-      box-shadow: 0 18px 45px rgba(102,123,115,0.14);
-      background: linear-gradient(180deg, #f8fbf9 0%, #ffffff 100%);
-    }
-
-    .service-card ul {
-      margin: 16px 0 0;
-      padding-left: 18px;
-      color: var(--text-700);
-    }
-
-    .service-card li + li { margin-top: 8px; }
-
-    .service-price {
-      font-weight: 800;
-      color: var(--green-900);
-      font-size: 1.1rem;
-      margin-top: 14px;
-    }
-
-    .banner-wrap {
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .banner-wrap img {
-      width: 100%;
-      display: block;
-    }
-
-    .story {
-      background: linear-gradient(180deg, #f1ebe2 0%, #f8f5ef 100%);
-    }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .story-photo {
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      min-height: 520px;
-    }
-
-    .story-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .dark-strip {
-      background: var(--green-900);
-      color: var(--white);
-    }
-
-    .dark-box {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .dark-box p {
-      color: rgba(255,255,255,0.9);
-      font-size: 1.05rem;
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, var(--green-900), #7f938a 62%, #b9b0c8 100%);
-      color: var(--white);
-    }
-
-    .cta-box {
-      border-radius: 32px;
-      padding: 42px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .cta-box p {
-      color: rgba(255,255,255,0.9);
-      max-width: 760px;
-      margin: 0 auto 16px;
-    }
-
-    .site-footer {
-      background: #4f665c;
-      color: rgba(255,255,255,0.82);
-      padding: 30px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-grid {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
+    .normativa-card h4 {
+      font-family: "Cinzel", serif;
       font-size: 0.95rem;
+      color: var(--green-900);
+      margin: 0 0 10px;
     }
 
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .hero-points,
-      .service-grid,
-      .why-grid,
-      .path-grid,
-      .proof-grid,
-      .story-grid {
-        grid-template-columns: 1fr;
-      }
+    .normativa-card p { font-size: 0.9rem; margin: 0; }
 
-      .nav-links { display: none; }
-      .mobile-toggle { display: inline-flex; }
-
-      .hero-logo-card {
-        position: static;
-        margin-top: 18px;
-        width: 130px;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .section { padding: 62px 0; }
-      .section-tight { padding: 48px 0; }
-
-      .container {
-        width: min(var(--max), calc(100% - 1.2rem));
-      }
-
-      .nav { min-height: 76px; }
-      .logo img { width: 154px; }
-
-      .hero-grid { gap: 26px; }
-
-      .hero-copy h1 {
-        font-size: clamp(2.2rem, 9vw, 3.4rem);
-        line-height: 1.04;
-      }
-
-      .lead { font-size: 1rem; }
-
-      .btn { width: 100%; }
-      .btn-row { align-items: stretch; }
-
-      .section-head {
-        text-align: left;
-        margin-bottom: 28px;
-      }
-
-      .section-head p {
-        max-width: none;
-        margin-left: 0;
-      }
-
-      .point,
-      .service-card,
-      .why-card,
-      .path-card,
-      .proof-card,
-      .cta-box { padding: 22px; }
-
-      .story-photo { min-height: 340px; }
-
-      .footer-grid { align-items: flex-start; }
+    @media(max-width:720px){
+      .normativa-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container nav">
       <a class="logo" href="/" aria-label="Inicio Verónica Salamanca">
-        <img src="../images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+        <img src="/images/Logo fondo transparente.png" alt="Verónica Salamanca" width="180" height="60" />
       </a>
-
       <nav class="nav-links" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-
         <div class="has-dropdown" id="arquenzaDropdown">
           <button class="dropdown-toggle" type="button" aria-expanded="false">Arquenza</button>
           <div class="dropdown-menu">
-            <a href="/arquenza/">Arquenza<span>Familia, filosofía de vida, talleres y experiencias holísticas.</span></a>
-            <a href="/arquenza/#familias">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
-            <a href="/arquenza/#aletia">Aletia<span>Base filosófica y visión profunda del universo Arquenza.</span></a>
-            <a href="/arquenza/#quinta-vibracion">Quinta Vibración<span>Transformación vibracional, presencia y experiencia consciente.</span></a>
+            <a href="/arquenza/">Arquenza<span>Filosofía de vida, familia y transformación consciente.</span></a>
+            <a href="/arquenza/familias/">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
+            <a href="/arquenza/experiencias/">Experiencias<span>Aletia y Quinta Vibración: talleres, presencia y transformación.</span></a>
           </div>
         </div>
-
         <a href="/sobre-mi/">Sobre mí</a>
         <a href="/contacto/">Contacto</a>
       </nav>
-
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
-        <span></span>
-      </button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel"><span></span></button>
     </div>
-
     <div class="mobile-panel" id="mobilePanel">
       <div class="mobile-nav">
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-
         <details class="mobile-submenu">
           <summary>Arquenza</summary>
           <div class="mobile-submenu-links">
             <a href="/arquenza/">Arquenza</a>
-            <a href="/arquenza/#familias">Familias</a>
-            <a href="/arquenza/#aletia">Aletia</a>
-            <a href="/arquenza/#quinta-vibracion">Quinta Vibración</a>
+            <a href="/arquenza/familias/">Familias</a>
+            <a href="/arquenza/experiencias/">Experiencias</a>
           </div>
         </details>
-
         <a href="/sobre-mi/">Sobre mí</a>
         <a href="/contacto/">Contacto</a>
-
         <div class="mobile-contact-row">
-          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20Prevenza.%20Quiero%20informaci%C3%B3n%20sobre%20servicios%20de%20empresa%2C%20prevenci%C3%B3n%20y%20estructura%20operativa." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20Prevenza.%20Quiero%20informaci%C3%B3n%20sobre%20servicios%20para%20mi%20empresa." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
           <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una reunión</a>
         </div>
       </div>
@@ -706,277 +128,254 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">PREVENZA | Empresa, prevención y estructura</span>
-          <h1>Prevención, estructura y control para empresas que no pueden permitirse el desorden.</h1>
+          <span class="eyebrow">Empresas · Pymes · Industrial</span>
+          <h1>Prevención, estructura y control para empresas que valoran el orden como rentabilidad.</h1>
           <p class="lead">
-            Prevenza está pensada para pymes y empresas industriales que necesitan orden real en administración, coordinación operativa, prevención y documentación.
+            El desorden operativo tiene un coste real: en tiempo, en dinero y en riesgo legal. Prevenza pone estructura donde hay caos, antes de que ese caos tenga un precio mayor.
           </p>
           <p>
-            No se trata solo de cumplir. Se trata de sostener la empresa con más claridad, menos fricción y menos coste invisible. Cuando la estructura falla, la prevención, la operativa y la rentabilidad acaban pagándolo.
+            Administración, prevención de riesgos laborales, coordinación CAE y dirección operativa. Todo lo que tu empresa necesita para funcionar con control real — sin depender de que "alguien lo lleve en la cabeza".
           </p>
-
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20Prevenza.%20Quiero%20informaci%C3%B3n%20sobre%20servicios%20de%20empresa%2C%20prevenci%C3%B3n%20y%20estructura%20operativa." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20Prevenza.%20Quiero%20informaci%C3%B3n%20sobre%20servicios%20para%20mi%20empresa." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
             <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una reunión</a>
             <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
           </div>
-
-          <div class="hero-points">
-            <div class="point">
-              <strong>Administración</strong>
-              <p>Orden documental, seguimiento y control real del día a día.</p>
-            </div>
-            <div class="point">
-              <strong>Operativa</strong>
-              <p>Coordinación entre oficina, obra, cliente y ejecución.</p>
-            </div>
-            <div class="point">
-              <strong>Prevención</strong>
-              <p>PRL, CAE y estructura preventiva integradas con criterio.</p>
-            </div>
-          </div>
+          <p class="hero-actions-note">Presupuesto a medida en 48 horas. Sin compromisos.</p>
         </div>
-
-        <div class="hero-aside">
-          <img class="hero-photo" src="../images/P1030816.JPG" alt="Verónica Salamanca en entorno profesional con portátil" />
-          <div class="hero-logo-card">
-            <img src="../images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+        <div class="hero-photo-wrap">
+          <!-- FOTO NUEVA: /images/foto-prevenza.jpg -->
+          <img class="hero-photo" src="/images/foto-prevenza.jpg" alt="Verónica Salamanca, consultora operativa y PRL" loading="eager" />
+          <div class="hero-badge">
+            <img src="/images/Logo fondo transparente.png" alt="Prevenza" width="90" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-tight">
-      <div class="container">
-        <div class="banner-wrap">
-          <img src="../images/Banner EQUILIBRATE.png" alt="Banner corporativo Verónica Salamanca" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section-tight">
+    <!-- DIAGNÓSTICO — LO QUE TU EMPRESA ESTÁ VIVIENDO -->
+    <section class="section-tight" style="background:var(--cream-100);">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Qué resuelve</span>
-          <h2>Donde otros ven tareas sueltas, yo veo estructura empresarial</h2>
-          <p>
-            Cuando la administración se desborda, la coordinación falla o la prevención se queda en papel, la empresa pierde tiempo, dinero y estabilidad. Prevenza nace para intervenir ahí, antes de que el caos se normalice.
-          </p>
+          <span class="eyebrow">¿Te reconoces aquí?</span>
+          <h2>El desorden operativo tiene cara.</h2>
+          <p>Si alguna de estas situaciones te resulta familiar, hay trabajo que hacer.</p>
         </div>
-
         <div class="why-grid">
           <article class="why-card">
-            <h3>Sobrecarga interna</h3>
-            <p>Cuando demasiadas funciones dependen de pocas personas y todo va al límite.</p>
+            <h3>Nadie lleva el control</h3>
+            <p>La documentación, los contratos y los registros dependen de que alguien lo recuerde. Cuando falta esa persona, todo se para.</p>
           </article>
-
           <article class="why-card">
-            <h3>Desorden documental</h3>
-            <p>Cuando la documentación, vencimientos y seguimientos dejan de estar realmente controlados.</p>
+            <h3>La prevención es un trámite</h3>
+            <p>Los documentos de PRL están para cumplir el expediente, pero nadie los aplica en el día a día y las inspecciones generan ansiedad.</p>
           </article>
-
           <article class="why-card">
-            <h3>Operativa fragmentada</h3>
-            <p>Cuando administración, cliente, obra y oficina técnica no están realmente coordinados.</p>
+            <h3>El equipo no tiene procesos</h3>
+            <p>Cada persona hace las cosas a su manera. Hay errores, duplicidades y reuniones que no resuelven nada.</p>
           </article>
-
           <article class="why-card">
-            <h3>Coste invisible</h3>
-            <p>Cuando el desorden interno empieza a traducirse en errores, tensión, tiempo perdido y pérdida de rentabilidad.</p>
+            <h3>El CAE es un dolor de cabeza</h3>
+            <p>La Coordinación de Actividades Empresariales acumula retrasos, documentos sin actualizar y contratas mal gestionadas.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="story section">
-      <div class="container story-grid">
-        <div class="story-photo">
-          <img src="../images/P1030631.JPG" alt="Verónica Salamanca en retrato profesional" />
+    <!-- CASOS REALES -->
+    <section id="casos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Casos reales</span>
+          <h2>Empresas que pusieron orden. Resultados que se miden.</h2>
+          <p>Sin nombres, con datos reales. El desorden tiene un coste. La estructura tiene un retorno.</p>
         </div>
 
-        <div>
-          <span class="eyebrow">Experiencia real</span>
-          <h2>He vivido esta realidad desde dentro.</h2>
-          <p>
-            Llevo años dirigiendo administración, coordinando operativa, gestionando prevención y CAE, supervisando documentación y sosteniendo la estructura interna de empresas industriales con alta exigencia real.
-          </p>
-          <p>
-            Eso me permite intervenir con criterio práctico y no desde una visión abstracta. Entiendo lo que pasa desde la solicitud del trabajo hasta la factura final, incluyendo cobros, permisos, cliente, transporte, PRL, coordinación y seguimiento.
-          </p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20Prevenza%20y%20quiero%20valorar%20una%20reuni%C3%B3n%20para%20hablar%20de%20mi%20empresa." target="_blank" rel="noopener">Hablar de mi empresa</a>
-            <a class="btn btn-ghost" href="/sobre-mi/">Ver recorrido</a>
-          </div>
+        <div class="cards-grid">
+          <article class="case-card">
+            <div class="card-body">
+              <p class="case-sector">Frío industrial · 25 empleados</p>
+              <h3>De cero a estructura completa</h3>
+              <p>
+                Una empresa del sector del frío industrial con 25 trabajadores. Al llegar: sin documentación legal, sin sistema administrativo y sin ningún procedimiento de prevención implantado. El negocio funcionaba, pero sobre arena.
+              </p>
+              <p>
+                Se construyó desde cero toda la base legal, administrativa y preventiva. Procesos documentados, PRL operativo y estructura de administración estable.
+              </p>
+              <div class="case-result">
+                <strong>Resultado:</strong> En 2 años, la empresa pasó de 300.000 € a 2.000.000 € de facturación. La estructura fue el sustento que permitió ese crecimiento.
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="card-body">
+              <p class="case-sector">Consultoría · 18 empleados</p>
+              <h3>Equipo organizado, operativa que funciona</h3>
+              <p>
+                Una consultoría con 18 personas donde las tareas diarias dependían de la memoria individual, sin procesos documentados ni asignación clara de responsabilidades. El equipo trabajaba mucho pero con roce interno constante.
+              </p>
+              <p>
+                Se rediseñaron los flujos de trabajo, se definieron roles con claridad y se implantaron procesos que el equipo pudiera seguir sin depender de nadie en concreto.
+              </p>
+              <div class="case-result">
+                <strong>Resultado:</strong> Reducción de errores internos, equipo con más autonomía y menos reuniones de "¿quién hace esto?".
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="card-body">
+              <p class="case-sector">Joyería · 5 empleados</p>
+              <h3>Control de proveedores y talleres externos</h3>
+              <p>
+                Una joyería con taller propio y relaciones con proveedores y talleres externos sin ningún sistema de seguimiento. Plazos incumplidos, pedidos perdidos y una relación con los proveedores que generaba más problemas que soluciones.
+              </p>
+              <p>
+                Se implantó un sistema de gestión de proveedores, seguimiento de encargos y protocolos de comunicación con talleres externos.
+              </p>
+              <div class="case-result">
+                <strong>Resultado:</strong> Control total del flujo con proveedores y talleres. Relaciones más ordenadas, plazos cumplidos y reducción del estrés operativo.
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="servicios" class="section">
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section" style="background:var(--cream-100);">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Servicios</span>
           <h2>Servicios pensados para sostener empresa real</h2>
-          <p>
-            He organizado Prevenza en cuatro servicios claros: dos troncales para estructura y operativa, uno estratégico para prevención y orden empresarial, y uno específico para sostenibilidad y diligencia debida.
-          </p>
+          <p>A medida. Sin paquetes estándar que no encajan con tu realidad.</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card featured">
-            <span class="tag">Servicio principal</span>
-            <h3>Backoffice preventivo y administrativo</h3>
-            <p>
-              Servicio orientado a liberar carga interna y sostener el orden documental, administrativo y preventivo de la empresa.
-            </p>
-            <ul>
-              <li>Administración completa y soporte interno</li>
-              <li>Gestión PRL y CAE interna y externa</li>
-              <li>Seguimiento documental y vencimientos</li>
-              <li>Coordinación con SPA, cliente y oficina</li>
-            </ul>
-            <p class="service-price">Servicio a medida</p>
+        <div class="two-col">
+          <article class="service-card">
+            <span class="service-tag">Administración</span>
+            <h3>Dirección administrativa</h3>
+            <p>Organización de la documentación, facturación, proveedores, contratos y procesos internos. Tu empresa funciona con orden, aunque no estés tú encima.</p>
           </article>
 
           <article class="service-card">
-            <span class="tag">Servicio integral</span>
-            <h3>Coordinación operativa empresarial</h3>
-            <p>
-              Para empresas que necesitan una figura que una la parte administrativa con la operativa real del trabajo.
-            </p>
-            <ul>
-              <li>Seguimiento desde solicitud hasta factura</li>
-              <li>Coordinación con clientes y transporte</li>
-              <li>Permisos, actuaciones y documentación asociada</li>
-              <li>Apoyo a oficina técnica y seguimiento interno</li>
-            </ul>
-            <p class="service-price">Servicio a medida</p>
+            <span class="service-tag">Prevención de Riesgos Laborales</span>
+            <h3>PRL integral</h3>
+            <p>Evaluación de riesgos, planificación preventiva, formación, vigilancia de la salud y documentación actualizada conforme a la LPRL y normativa vigente. PRL que se aplica, no que se archiva.</p>
           </article>
 
           <article class="service-card">
-            <span class="tag">Apoyo estratégico</span>
-            <h3>Estructura preventiva y soporte de dirección</h3>
-            <p>
-              Un servicio de apoyo para detectar puntos de fricción, ordenar prioridades y reforzar la estructura sin invadir áreas que correspondan a otras direcciones especializadas.
-            </p>
-            <ul>
-              <li>Lectura estructural del desorden interno</li>
-              <li>Apoyo a gerencia y dirección</li>
-              <li>Visión preventiva aplicada a la empresa</li>
-              <li>Soporte complementario a equipos existentes</li>
-            </ul>
-            <p class="service-price">Desde diagnóstico previo</p>
+            <span class="service-tag">CAE</span>
+            <h3>Coordinación de Actividades Empresariales</h3>
+            <p>Gestión completa de la coordinación con contratas y subcontratas según el RD 171/2004. Documentación al día, flujo claro y cero improvisación en obra o instalación.</p>
           </article>
 
           <article class="service-card">
-            <span class="tag">Servicio específico</span>
-            <h3>Sostenibilidad y diligencia debida</h3>
-            <p>
-              Servicio independiente para empresas que necesiten abordar la parte de sostenibilidad, criterios de responsabilidad y diligencia debida sin contratar el resto de líneas.
-            </p>
-            <ul>
-              <li>Enfoque alineado con exigencias crecientes del entorno europeo</li>
-              <li>Lectura práctica para pymes y empresa real</li>
-              <li>Base documental y orientación estratégica</li>
-              <li>Servicio compatible con otras asesorías</li>
-            </ul>
-            <p class="service-price">Proyecto o acompañamiento</p>
+            <span class="service-tag">Operativa</span>
+            <h3>Dirección operativa</h3>
+            <p>Diseño de procesos, flujos de trabajo y estructura de equipo. Para que tu empresa pueda crecer sin que todo dependa de una sola persona.</p>
           </article>
         </div>
-      </div>
-    </section>
 
-    <section class="dark-strip section-tight">
-      <div class="container dark-box">
-        <span class="eyebrow" style="background: rgba(255,255,255,0.14); color:#fff;">Diferencial</span>
-        <h2 style="color:#fff;">Prevenza no vende tranquilidad superficial. Vende control real.</h2>
-        <p>
-          La prevención no es solo cumplimiento. También es evitar desorden, fricción, errores, fuga de tiempo, saturación interna y pérdida silenciosa de rentabilidad. Por eso aquí se trabaja con visión operativa, preventiva y empresarial a la vez.
-        </p>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Dónde aporta más</span>
-          <h2>Ideal para empresas que ya sienten que algo se está tensando</h2>
-          <p>
-            Prevenza encaja especialmente bien en empresas industriales, mantenimiento, construcción, servicios técnicos o pymes donde la operativa, la documentación y la prevención ya han alcanzado un punto de complejidad real.
-          </p>
-        </div>
-
-        <div class="proof-grid">
-          <article class="proof-card">
-            <h3>Pymes industriales</h3>
-            <p>Cuando la empresa ha crecido y la estructura interna ya no se sostiene “como antes”.</p>
-          </article>
-
-          <article class="proof-card">
-            <h3>Empresas con obra o actuación técnica</h3>
-            <p>Cuando PRL, CAE, cliente, oficina y ejecución necesitan estar verdaderamente coordinados.</p>
-          </article>
-
-          <article class="proof-card">
-            <h3>Empresas con saturación administrativa</h3>
-            <p>Cuando el problema no es solo tener trabajo, sino no tener estructura suficiente para absorberlo bien.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Cómo trabajar conmigo</span>
-          <h2>Un recorrido claro y profesional</h2>
-          <p>
-            El objetivo no es complicar más la empresa con otra capa de teoría. El objetivo es detectar con rapidez dónde está la tensión real y plantear una vía útil.
-          </p>
-        </div>
-
-        <div class="path-grid">
-          <article class="path-card">
-            <h3>1. Me cuentas tu situación</h3>
-            <p>Qué tipo de empresa sois, qué os está pasando y dónde sentís más carga o desorden.</p>
-          </article>
-
-          <article class="path-card">
-            <h3>2. Valoro encaje</h3>
-            <p>Vemos si lo más adecuado es un soporte administrativo-preventivo, coordinación operativa o un servicio más estratégico.</p>
-          </article>
-
-          <article class="path-card">
-            <h3>3. Definimos una vía útil</h3>
-            <p>Con foco en lo que realmente necesita la empresa y sin invadir áreas que no corresponden.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section section">
-      <div class="container">
-        <div class="cta-box">
-          <span class="eyebrow" style="background: rgba(255,255,255,0.12); color:#fff;">Siguiente paso</span>
-          <h2 style="color:#fff; margin-top:14px;">Si tu empresa necesita más estructura, hablemos</h2>
-          <p>
-            Puedes escribirme directamente para contarme qué está pasando o reservar una reunión para valorar si Prevenza encaja con vuestra situación.
-          </p>
+        <div style="text-align:center;margin-top:42px;">
+          <p style="font-size:1.05rem;color:var(--text-700);max-width:600px;margin:0 auto 22px;"><strong>¿Sabes qué necesita tu empresa pero no por dónde empezar?</strong><br>Escríbeme o agenda una llamada. Te respondo con un presupuesto a medida en 48 horas.</p>
           <div class="btn-row" style="justify-content:center;">
-            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20Prevenza.%20Mi%20empresa%20necesita%20ayuda%20con%20%3A%20administraci%C3%B3n%20%2F%20prevenci%C3%B3n%20%2F%20coordinaci%C3%B3n%20%2F%20orden%20interno." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una reunión</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20quiero%20un%20presupuesto%20para%20mi%20empresa." target="_blank" rel="noopener">Pedir presupuesto por WhatsApp</a>
+            <a class="btn btn-ghost" href="/contacto/#formulario">Formulario de contacto</a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- SECCIÓN PRL ESPECÍFICA -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Prevención de Riesgos Laborales</span>
+          <h2>La PRL bien hecha no es un gasto. Es la inversión con mayor retorno en tu empresa.</h2>
+          <p>
+            La normativa española y la nueva regulación europea han cambiado el enfoque. La prevención ya no es solo cumplimiento: es ventaja competitiva, acceso a contratos y protección del negocio.
+          </p>
+        </div>
+
+        <div class="prl-nota">
+          <strong>Marco normativo vigente:</strong> La Ley 31/1995 de Prevención de Riesgos Laborales, el RD 39/1997 que regula los Servicios de Prevención, y la nueva Directiva Europea de Diligencia Debida en Sostenibilidad (CSDDD) establecen que las empresas deben garantizar condiciones de trabajo seguras en toda su cadena de valor. Incumplir tiene consecuencias económicas y reputacionales crecientes.
+        </div>
+
+        <div class="normativa-grid">
+          <div class="normativa-card">
+            <h4>Cumplimiento legal</h4>
+            <p>Evaluación de riesgos por puesto de trabajo, planificación de la actividad preventiva, formación e información a trabajadores, y documentación actualizada conforme a la LPRL y RD 39/1997.</p>
+          </div>
+          <div class="normativa-card">
+            <h4>Vigilancia de la salud</h4>
+            <p>Coordinación con servicio médico, seguimiento de reconocimientos médicos, gestión de trabajadores especialmente sensibles y adaptaciones de puesto conforme a obligaciones legales.</p>
+          </div>
+          <div class="normativa-card">
+            <h4>PRL como ventaja de negocio</h4>
+            <p>Empresas con sistemas de prevención sólidos acceden a más contratos públicos, reducen la siniestralidad (y su coste), mejoran la productividad y posicionan mejor ante clientes que exigen certificaciones de seguridad a sus proveedores.</p>
+          </div>
+          <div class="normativa-card">
+            <h4>Coordinación CAE (RD 171/2004)</h4>
+            <p>Gestión del intercambio de documentación preventiva con contratas y subcontratas. Obligación legal que muchas empresas gestionan mal, con riesgo de responsabilidad subsidiaria en caso de accidente.</p>
+          </div>
+          <div class="normativa-card">
+            <h4>Planes de emergencia</h4>
+            <p>Elaboración e implantación de planes de autoprotección y evacuación, simulacros y formación de equipos de emergencia. Obligatorio para determinadas actividades según el RD 393/2007.</p>
+          </div>
+          <div class="normativa-card">
+            <h4>Nuevas obligaciones europeas</h4>
+            <p>La Directiva de Diligencia Debida (CSDDD) obliga a grandes empresas a verificar condiciones laborales en su cadena de suministro. Ser proveedor con PRL acreditada es una ventaja competitiva real frente a tus competidores.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:42px;">
+          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20quiero%20revisar%20la%20PRL%20de%20mi%20empresa." target="_blank" rel="noopener">Revisar la PRL de mi empresa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDIBILIDAD -->
+    <section class="intro-strip section-tight">
+      <div class="container intro-box">
+        <span class="eyebrow" style="background:rgba(255,255,255,0.14);color:#fff;">Criterio</span>
+        <h2 style="color:#fff;">Lo que no se detecta a tiempo se convierte en un problema que ya no tiene solución rápida.</h2>
+        <p>
+          12 años trabajando en empresa industrial desde dentro — administración, prevención, coordinación operativa — me dan el criterio para leer lo que está fallando antes de que cueste caro. Prevenza no vende tranquilidad superficial. Vende control real.
+        </p>
+        <div class="btn-row" style="justify-content:center;margin-top:28px;">
+          <a class="btn btn-white" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20quiero%20hablar%20sobre%20mi%20empresa." target="_blank" rel="noopener">Hablamos de tu empresa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="eyebrow" style="background:rgba(255,255,255,0.12);color:#fff;">Siguiente paso</span>
+          <h2 style="color:#fff;margin-top:14px;">Presupuesto a medida en 48 horas.</h2>
+          <p>Cuéntame brevemente tu situación por WhatsApp o a través del formulario. Sin compromisos, sin visitas comerciales innecesarias.</p>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn-white" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20quiero%20un%20presupuesto%20para%20mi%20empresa%20en%2048h." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una reunión</a>
+            <a class="btn btn-ghost" style="border-color:rgba(255,255,255,0.3);color:#fff;" href="/contacto/#formulario">Formulario de contacto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p style="margin:0; color: rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
-
+      <p style="margin:0;color:rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
       <div class="footer-links">
         <a href="/">Inicio</a>
         <a href="/sobre-mi/">Sobre mí</a>
@@ -993,7 +392,6 @@
     const mobilePanel = document.getElementById("mobilePanel");
     const arquenzaDropdown = document.getElementById("arquenzaDropdown");
     const dropdownButton = arquenzaDropdown ? arquenzaDropdown.querySelector(".dropdown-toggle") : null;
-
     if (mobileToggle && mobilePanel) {
       mobileToggle.addEventListener("click", () => {
         const isOpen = mobilePanel.classList.toggle("open");
@@ -1001,7 +399,6 @@
         mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
         document.body.classList.toggle("menu-open", isOpen);
       });
-
       mobilePanel.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
           mobilePanel.classList.remove("open");
@@ -1011,14 +408,12 @@
         });
       });
     }
-
     if (arquenzaDropdown && dropdownButton) {
       dropdownButton.addEventListener("click", (e) => {
         e.stopPropagation();
         const isOpen = arquenzaDropdown.classList.toggle("open");
         dropdownButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
-
       document.addEventListener("click", (e) => {
         if (!arquenzaDropdown.contains(e.target)) {
           arquenzaDropdown.classList.remove("open");

@@ -4,817 +4,178 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto | Verónica Salamanca</title>
-  <meta
-    name="description"
-    content="Escríbeme por WhatsApp, solicita información o agenda directamente una sesión con Verónica Salamanca."
-  />
+  <meta name="description" content="Escríbeme por WhatsApp, agenda una sesión o envíame un mensaje. Te respondo en menos de 48 horas hábiles." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.veronicasalamanca.com/contacto/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Verónica Salamanca" />
   <meta property="og:title" content="Contacto | Verónica Salamanca" />
-  <meta property="og:description" content="Escríbeme por WhatsApp, solicita información o agenda directamente una sesión con Verónica Salamanca." />
+  <meta property="og:description" content="Escríbeme por WhatsApp, agenda una sesión o envíame un mensaje. Te respondo en menos de 48 horas hábiles." />
   <meta property="og:url" content="https://www.veronicasalamanca.com/contacto/" />
   <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contacto | Verónica Salamanca" />
-  <meta name="twitter:description" content="Escríbeme por WhatsApp, solicita información o agenda directamente una sesión con Verónica Salamanca." />
-  <meta name="twitter:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
-
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <link rel="icon" type="image/png" href="/images/Logo%20Visual.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
 
   <style>
-    :root {
-      --green-900: #667b73;
-      --green-800: #7f938a;
-      --mint-500: #a7c6b7;
-      --mint-300: #dbe9e2;
-      --lilac-500: #b9b0c8;
-      --lilac-300: #e7e2ef;
-      --gold-500: #c5a94e;
-      --cream-50: #faf8f4;
-      --cream-100: #f3eee7;
-      --sand-200: #e7ddd1;
-      --text-900: #181818;
-      --text-700: #4e4e4e;
-      --text-500: #7a7a7a;
-      --white: #ffffff;
-      --success: #2f7d4a;
-      --error: #a43c3c;
-      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
-      --shadow-card: 0 12px 26px rgba(24, 24, 24, 0.07);
-      --radius-xl: 32px;
-      --radius-lg: 22px;
-      --max: 1240px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: "Montserrat", system-ui, sans-serif;
-      color: var(--text-900);
-      background: var(--cream-50);
-      line-height: 1.55;
-    }
-
-    body.menu-open { overflow: hidden; }
-
-    img {
-      max-width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 2rem));
-      margin: 0 auto;
-    }
-
-    .section { padding: 84px 0; }
-    .section-tight { padding: 62px 0; }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 9px 14px;
-      border-radius: 999px;
-      background: rgba(167, 198, 183, 0.18);
-      color: var(--green-900);
-      font-size: 0.84rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1, h2, h3, .nav-links, .dropdown-menu a, .mobile-nav a, .mobile-submenu summary {
-      font-family: "Cinzel", serif;
-      letter-spacing: -0.02em;
-      line-height: 1.02;
-      margin: 0 0 16px;
-    }
-
-    h1 { font-size: clamp(2.7rem, 6vw, 5rem); }
-    h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
-    h3 { font-size: clamp(1.3rem, 2.3vw, 2rem); }
-
-    p {
-      margin: 0 0 16px;
-      color: var(--text-700);
-      font-size: 1rem;
-    }
-
-    .lead { font-size: 1.08rem; }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      padding: 0 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-      text-align: center;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: var(--green-900);
-      color: var(--white);
-      box-shadow: var(--shadow-card);
-    }
-
-    .btn-secondary {
-      background: var(--gold-500);
-      color: var(--white);
-      box-shadow: var(--shadow-card);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      border-color: rgba(102, 123, 115, 0.22);
-      color: var(--green-900);
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(102, 123, 115, 0.98);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      min-height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
+      margin-bottom: 62px;
     }
-
-    .logo img { width: 180px; height: auto; }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: var(--white);
-      font-size: 0.96rem;
-      margin: 0;
-    }
-
-    .nav-links > a,
-    .dropdown-toggle {
-      color: var(--white);
-      font-weight: 500;
-      cursor: pointer;
-      background: none;
-      border: none;
-      font: inherit;
-      padding: 0;
-    }
-
-    .has-dropdown {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    .dropdown-toggle::after {
-      content: "▾";
-      margin-left: 8px;
-      font-size: 0.78rem;
-      font-family: sans-serif;
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 14px);
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 320px;
-      background: var(--white);
-      border-radius: 18px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(102,123,115,0.12);
-      padding: 14px;
-      display: none;
-      z-index: 1200;
-    }
-
-    .has-dropdown.open .dropdown-menu { display: block; }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 12px;
-      border-radius: 12px;
-      color: var(--green-900);
-      font-size: 0.96rem;
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    .dropdown-menu a span {
-      display: block;
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.84rem;
-      color: var(--text-500);
-      margin-top: 5px;
-      line-height: 1.4;
-    }
-
-    .dropdown-menu a:hover { background: var(--cream-100); }
-
-    .mobile-toggle {
-      display: none;
-      width: 48px;
-      height: 48px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: transparent;
-      border-radius: 14px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      padding: 0;
-      position: relative;
-    }
-
-    .mobile-toggle span,
-    .mobile-toggle::before,
-    .mobile-toggle::after {
-      content: "";
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 99px;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-      position: absolute;
-    }
-
-    .mobile-toggle span { transform: translateY(0); }
-    .mobile-toggle::before { transform: translateY(-7px); }
-    .mobile-toggle::after { transform: translateY(7px); }
-
-    .mobile-toggle.active span { opacity: 0; }
-    .mobile-toggle.active::before { transform: rotate(45deg); }
-    .mobile-toggle.active::after { transform: rotate(-45deg); }
-
-    .mobile-panel {
-      display: none;
-      position: fixed;
-      inset: 76px 0 0 0;
-      background: rgba(250, 248, 244, 0.98);
-      backdrop-filter: blur(10px);
-      z-index: 1100;
-      overflow-y: auto;
-      border-top: 1px solid rgba(102, 123, 115, 0.12);
-      padding: 18px 0 24px;
-    }
-
-    .mobile-panel.open { display: block; }
-
-    .mobile-nav {
-      width: min(var(--max), calc(100% - 1.2rem));
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .mobile-nav > a,
-    .mobile-submenu summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--white);
-      color: var(--green-900);
-      border: 1px solid rgba(102, 123, 115, 0.12);
-      border-radius: 16px;
-      padding: 16px 18px;
-      font-size: 1.05rem;
-      box-shadow: var(--shadow-card);
-      margin: 0;
-    }
-
-    .mobile-submenu summary {
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .mobile-submenu summary::-webkit-details-marker { display: none; }
-
-    .mobile-submenu[open] summary {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    .mobile-submenu-links {
-      background: var(--white);
-      border: 1px solid rgba(102,123,115,0.12);
-      border-top: 0;
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
-      padding: 6px 10px 12px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .mobile-submenu-links a {
-      display: block;
-      padding: 12px 10px;
-      border-radius: 12px;
-      color: var(--green-900);
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.96rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .mobile-submenu-links a + a { margin-top: 4px; }
-    .mobile-submenu-links a:hover { background: var(--cream-100); }
-
-    .mobile-contact-row {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at top left, rgba(167,198,183,0.14), transparent 28%),
-        linear-gradient(180deg, #faf8f4 0%, #f2ece4 100%);
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 0.96fr 1.04fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .hero-photo {
-      width: 100%;
-      border-radius: var(--radius-xl);
-      object-fit: cover;
-      box-shadow: var(--shadow-soft);
-      aspect-ratio: 4 / 5;
-    }
-
-    .contact-grid,
-    .path-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .contact-grid { grid-template-columns: repeat(3, 1fr); }
-    .path-grid { grid-template-columns: repeat(3, 1fr); }
-
-    .contact-card,
-    .path-card {
+    .contact-method {
       background: var(--white);
       border-radius: var(--radius-lg);
       border: 1px solid rgba(102,123,115,0.08);
       box-shadow: var(--shadow-card);
-      padding: 24px;
-    }
-
-    .contact-card h3,
-    .path-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-    }
-
-    .contact-card p,
-    .path-card p {
-      margin-bottom: 0;
-    }
-
-    .contact-card.featured {
-      border: 1px solid rgba(102,123,115,0.25);
-      box-shadow: 0 18px 45px rgba(102,123,115,0.14);
-      background: linear-gradient(180deg, #f8fbf9 0%, #ffffff 100%);
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(167,198,183,0.18);
-      color: var(--green-900);
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: 16px;
-    }
-
-    .info-strip {
-      background: var(--green-900);
-      color: var(--white);
-    }
-
-    .info-box {
-      max-width: 860px;
-      margin: 0 auto;
+      padding: 28px;
       text-align: center;
     }
-
-    .info-box p {
-      color: rgba(255,255,255,0.9);
-      font-size: 1.05rem;
-    }
-
-    .section-head {
-      max-width: 860px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .section-head p {
-      max-width: 760px;
-      margin: 0 auto 14px;
-    }
-
-    .form-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(102,123,115,0.08);
-      box-shadow: var(--shadow-card);
-      padding: 32px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-weight: 700;
-      color: var(--green-900);
-      font-size: 0.95rem;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid rgba(102,123,115,0.18);
-      border-radius: 14px;
-      padding: 14px 16px;
-      font: inherit;
-      color: var(--text-900);
-      background: #fff;
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .helper {
-      font-size: 0.9rem;
-      color: var(--text-500);
-      margin-top: 8px;
-    }
-
-    .form-status {
-      display: none;
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      font-weight: 600;
-    }
-
-    .form-status.success {
-      display: block;
-      background: rgba(47, 125, 74, 0.10);
-      color: var(--success);
-      border: 1px solid rgba(47, 125, 74, 0.22);
-    }
-
-    .form-status.error {
-      display: block;
-      background: rgba(164, 60, 60, 0.10);
-      color: var(--error);
-      border: 1px solid rgba(164, 60, 60, 0.22);
-    }
-
-    .site-footer {
-      background: #4f665c;
-      color: rgba(255,255,255,0.82);
-      padding: 30px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-grid {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .contact-grid,
-      .path-grid,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links { display: none; }
-      .mobile-toggle { display: inline-flex; }
-    }
-
-    @media (max-width: 720px) {
-      .section { padding: 62px 0; }
-      .section-tight { padding: 48px 0; }
-
-      .container {
-        width: min(var(--max), calc(100% - 1.2rem));
-      }
-
-      .nav { min-height: 76px; }
-      .logo img { width: 154px; }
-
-      .hero-grid { gap: 26px; }
-
-      .hero-copy h1 {
-        font-size: clamp(2.2rem, 9vw, 3.2rem);
-        line-height: 1.04;
-      }
-
-      .lead { font-size: 1rem; }
-
-      .btn { width: 100%; }
-      .btn-row { align-items: stretch; }
-
-      .form-wrap,
-      .contact-card,
-      .path-card { padding: 22px; }
-
-      .footer-grid { align-items: flex-start; }
-    }
+    .contact-method-icon { font-size: 2rem; margin-bottom: 12px; }
+    .contact-method h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .contact-method p { font-size: 0.92rem; margin-bottom: 18px; }
+    .contact-email { font-size: 0.9rem; color: var(--text-500); }
+    .contact-email a { color: var(--green-900); font-weight: 600; text-decoration: underline; }
+    @media(max-width:720px){ .contact-methods { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+
   <header class="site-header">
     <div class="container nav">
       <a class="logo" href="/" aria-label="Inicio Verónica Salamanca">
-        <img src="../images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+        <img src="/images/Logo fondo transparente.png" alt="Verónica Salamanca" width="180" height="60" />
       </a>
-
       <nav class="nav-links" aria-label="Principal">
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-
         <div class="has-dropdown" id="arquenzaDropdown">
           <button class="dropdown-toggle" type="button" aria-expanded="false">Arquenza</button>
           <div class="dropdown-menu">
-            <a href="/arquenza/">Arquenza<span>Familia, filosofía de vida, talleres y experiencias holísticas.</span></a>
-            <a href="/arquenza/#familias">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
-            <a href="/arquenza/#aletia">Aletia<span>Base filosófica y visión profunda del universo Arquenza.</span></a>
-            <a href="/arquenza/#quinta-vibracion">Quinta Vibración<span>Transformación vibracional, presencia y experiencia consciente.</span></a>
+            <a href="/arquenza/">Arquenza<span>Filosofía de vida, familia y transformación consciente.</span></a>
+            <a href="/arquenza/familias/">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
+            <a href="/arquenza/experiencias/">Experiencias<span>Aletia y Quinta Vibración: talleres, presencia y transformación.</span></a>
           </div>
         </div>
-
         <a href="/sobre-mi/">Sobre mí</a>
         <a href="/contacto/">Contacto</a>
       </nav>
-
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
-        <span></span>
-      </button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel"><span></span></button>
     </div>
-
     <div class="mobile-panel" id="mobilePanel">
       <div class="mobile-nav">
-        <a href="/">Inicio</a>
-        <a href="/prevenza/">Prevenza</a>
-        <a href="/equilibrate/">Equilíbrate</a>
-
-        <details class="mobile-submenu">
-          <summary>Arquenza</summary>
+        <a href="/">Inicio</a><a href="/prevenza/">Prevenza</a><a href="/equilibrate/">Equilíbrate</a>
+        <details class="mobile-submenu"><summary>Arquenza</summary>
           <div class="mobile-submenu-links">
-            <a href="/arquenza/">Arquenza</a>
-            <a href="/arquenza/#familias">Familias</a>
-            <a href="/arquenza/#aletia">Aletia</a>
-            <a href="/arquenza/#quinta-vibracion">Quinta Vibración</a>
+            <a href="/arquenza/">Arquenza</a><a href="/arquenza/familias/">Familias</a><a href="/arquenza/experiencias/">Experiencias</a>
           </div>
         </details>
-
-        <a href="/sobre-mi/">Sobre mí</a>
-        <a href="/contacto/">Contacto</a>
-
+        <a href="/sobre-mi/">Sobre mí</a><a href="/contacto/">Contacto</a>
         <div class="mobile-contact-row">
-          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-          <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
+          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div>
-          <img class="hero-photo" src="../images/P1030603.JPG" alt="Verónica Salamanca en una imagen cercana" />
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Contacto</span>
+          <h1>Elige la forma que más te convenga.</h1>
+          <p>Esta página está pensada para facilitar el contacto, no para complicarlo. Elige la vía que mejor encaje con tu momento.</p>
+          <p class="contact-email" style="font-size:0.95rem;">También puedes escribirme directamente a <a href="mailto:escribenos@veronicasalamanca.com">escribenos@veronicasalamanca.com</a></p>
         </div>
 
-        <div class="hero-copy">
-          <span class="eyebrow">Contacto</span>
-          <h1>Si quieres avanzar, hablemos con claridad desde el principio.</h1>
-          <p class="lead">
-            Esta página está pensada para facilitar el contacto, no para hacerlo más complejo. Puedes escribirme directamente por WhatsApp, solicitar información o reservar una sesión desde el calendario.
-          </p>
-          <p>
-            Según tu situación, te orientaré hacia Prevenza, Equilíbrate o Arquenza. Lo importante no es encajar en una etiqueta, sino saber si hay una vía real de trabajo útil para ti.
-          </p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-method-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>La vía más rápida. Cuéntame brevemente tu situación y te respondo directamente.</p>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20tu%20web.%20Quiero%20saber%20c%C3%B3mo%20puedes%20ayudarme." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          </div>
 
-          <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <div class="contact-method">
+            <div class="contact-method-icon">📅</div>
+            <h3>Calendario</h3>
+            <p>Reserva directamente una sesión de orientación en el horario que mejor te venga.</p>
             <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
-            <a class="btn btn-ghost" href="#formulario">Solicitar información</a>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon">✉️</div>
+            <h3>Formulario</h3>
+            <p>Si prefieres escribir con más calma y detalle, usa el formulario de más abajo.</p>
+            <a class="btn btn-ghost" href="#formulario">Ir al formulario</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section-tight">
-      <div class="container">
-        <div class="contact-grid">
-          <article class="contact-card featured">
-            <span class="tag">Vía principal</span>
-            <h3>WhatsApp</h3>
-            <p>
-              La forma más rápida y directa de contarme tu situación y saber si hay encaje.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Abrir WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <span class="tag">Si prefieres ordenar primero</span>
-            <h3>Formulario</h3>
-            <p>
-              Déjame tu mensaje con algo de contexto y te responderé con la vía más adecuada.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn-ghost" href="#formulario">Ir al formulario</a>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <span class="tag">Reserva directa</span>
-            <h3>Agenda una sesión</h3>
-            <p>
-              Si prefieres reservar directamente una reunión o sesión, ya puedes hacerlo desde mi calendario.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Abrir calendario</a>
-            </div>
-          </article>
+        <div style="background:rgba(167,198,183,0.1);border-radius:18px;padding:18px 24px;margin-bottom:52px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:1.4rem;">⏱</span>
+          <p style="margin:0;font-size:0.95rem;color:var(--text-700);">Te respondo en <strong>menos de 48 horas hábiles</strong>. La vía más rápida siempre es WhatsApp.</p>
         </div>
       </div>
     </section>
 
-    <section class="info-strip section-tight">
-      <div class="container info-box">
-        <span class="eyebrow" style="background: rgba(255,255,255,0.14); color:#fff;">Antes de escribir</span>
-        <h2 style="color:#fff;">Cuanto más claro me cuentes tu situación, mejor podré orientarte.</h2>
-        <p>
-          No hace falta escribir mucho. Basta con que me digas si vienes por empresa, organización personal o un proceso familiar y qué es lo que más te preocupa ahora mismo.
-        </p>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container">
-        <div class="path-grid">
-          <article class="path-card">
-            <h3>Si vienes por empresa</h3>
-            <p>Cuéntame brevemente qué está pasando en la operativa, en la administración o en la prevención.</p>
-          </article>
-
-          <article class="path-card">
-            <h3>Si vienes por Equilíbrate</h3>
-            <p>Cuéntame en qué punto estás y qué sientes que ya no puedes sostener igual.</p>
-          </article>
-
-          <article class="path-card">
-            <h3>Si vienes por Arquenza</h3>
-            <p>Cuéntame qué proceso familiar, emocional o vital estás viviendo y qué necesitas sostener mejor.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="formulario" class="section">
+    <!-- FORMULARIO -->
+    <section id="formulario" class="section-tight" style="background:var(--cream-100);">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Formulario</span>
           <h2>Solicita información</h2>
-          <p>
-            Déjame tus datos y un breve mensaje. El formulario ya está conectado y te responderé desde la vía más adecuada según tu caso.
-          </p>
+          <p>Déjame tus datos y un breve mensaje. Te responderé desde la vía más adecuada para tu caso en menos de 48 horas hábiles.</p>
         </div>
 
         <div class="form-wrap">
-          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
             <input type="hidden" name="access_key" value="e8ba3dc7-de20-4ebb-86ac-5c0612808f6f" />
             <input type="hidden" name="subject" value="Nuevo contacto desde veronicasalamanca.com" />
             <input type="hidden" name="from_name" value="Web Verónica Salamanca" />
-            <input type="hidden" name="redirect" value="" />
             <input type="checkbox" name="botcheck" style="display:none;" />
 
             <div class="form-grid">
               <div class="field">
-                <label for="nombre">Nombre</label>
+                <label for="nombre">Nombre *</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
               </div>
 
               <div class="field">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" />
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono (opcional)" />
               </div>
 
               <div class="field">
-                <label for="email">Email</label>
+                <label for="email">Email *</label>
                 <input type="email" id="email" name="email" placeholder="Tu email" required />
               </div>
 
               <div class="field">
-                <label for="linea">¿Sobre qué línea quieres escribir?</label>
+                <label for="linea">¿Sobre qué línea quieres escribir? *</label>
                 <select id="linea" name="linea" required>
                   <option value="">Selecciona una opción</option>
-                  <option value="prevenza">Prevenza</option>
-                  <option value="equilibrate">Equilíbrate</option>
-                  <option value="arquenza">Arquenza</option>
-                  <option value="otro">No lo tengo claro</option>
+                  <option value="prevenza">Prevenza (Empresa)</option>
+                  <option value="equilibrate">Equilíbrate (Personal)</option>
+                  <option value="arquenza">Arquenza (Familia/Filosofía)</option>
+                  <option value="otro">Tengo dudas, orléntame tú</option>
                 </select>
               </div>
 
               <div class="field full">
-                <label for="mensaje">Cuéntame tu situación</label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  placeholder="Escríbeme brevemente qué está pasando y qué necesitas ahora mismo."
-                  required
-                ></textarea>
-                <p class="helper">
-                  También puedes escribir directamente a <strong>escribenos@veronicasalamanca.com</strong>, aunque la vía más ágil suele ser WhatsApp.
-                </p>
+                <label for="mensaje">Cuéntame tu situación *</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escríbeme brevemente qué está pasando y qué necesitas ahora mismo." required></textarea>
+              </div>
+
+              <div class="field full">
+                <div class="rgpd-row">
+                  <input type="checkbox" id="rgpd" name="rgpd" required />
+                  <label for="rgpd" style="font-weight:400;">He leído y acepto la <a href="/privacidad/" target="_blank">Política de Privacidad</a>. Consiento el tratamiento de mis datos personales para recibir respuesta a mi consulta. Puedo ejercer mis derechos de acceso, rectificación y supresión enviando un email a <a href="mailto:escribenos@veronicasalamanca.com">escribenos@veronicasalamanca.com</a>.</label>
+                </div>
               </div>
 
               <div class="field full">
@@ -823,40 +184,39 @@
             </div>
           </form>
 
-          <div id="formSuccess" class="form-status success">
-            Tu solicitud se ha enviado correctamente. Te responderé lo antes posible.
+          <div id="formSuccess" class="form-status success" style="display:none;">
+            Tu solicitud se ha enviado correctamente. Te respondo en menos de 48 horas hábiles.
           </div>
-
-          <div id="formError" class="form-status error">
-            Ha habido un problema al enviar el formulario. Prueba de nuevo o escríbeme por WhatsApp.
+          <div id="formError" class="form-status error" style="display:none;">
+            Ha habido un problema al enviar. Prueba de nuevo o escríbeme directamente a <a href="mailto:escribenos@veronicasalamanca.com">escribenos@veronicasalamanca.com</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CALENDLY -->
     <section class="section-tight">
-      <div class="container">
+      <div class="container" style="max-width:800px;">
         <div class="section-head">
           <span class="eyebrow">Reserva directa</span>
-          <h2>Si lo prefieres, puedes agendar directamente</h2>
-          <p>
-            Si ya sabes que quieres tener una conversación o valorar una sesión, puedes reservar directamente desde el calendario.
-          </p>
-          <div class="btn-row" style="justify-content:center;">
-            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
-          </div>
+          <h2>Agenda directamente si lo prefieres</h2>
+          <p>Elige el día y la hora que mejor te vengan. Primera sesión de orientación gratuita.</p>
+        </div>
+        <div style="text-align:center;">
+          <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener" style="font-size:1rem;padding:0 36px;min-height:58px;">Abrir calendario de reservas</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p style="margin:0; color: rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
-
+      <p style="margin:0;color:rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
       <div class="footer-links">
         <a href="/">Inicio</a>
         <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
         <a href="/aviso-legal/">Aviso legal</a>
         <a href="/privacidad/">Privacidad</a>
         <a href="/cookies/">Cookies</a>
@@ -869,7 +229,6 @@
     const mobilePanel = document.getElementById("mobilePanel");
     const arquenzaDropdown = document.getElementById("arquenzaDropdown");
     const dropdownButton = arquenzaDropdown ? arquenzaDropdown.querySelector(".dropdown-toggle") : null;
-
     if (mobileToggle && mobilePanel) {
       mobileToggle.addEventListener("click", () => {
         const isOpen = mobilePanel.classList.toggle("open");
@@ -877,7 +236,6 @@
         mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
         document.body.classList.toggle("menu-open", isOpen);
       });
-
       mobilePanel.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
           mobilePanel.classList.remove("open");
@@ -887,14 +245,12 @@
         });
       });
     }
-
     if (arquenzaDropdown && dropdownButton) {
       dropdownButton.addEventListener("click", (e) => {
         e.stopPropagation();
         const isOpen = arquenzaDropdown.classList.toggle("open");
         dropdownButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
-
       document.addEventListener("click", (e) => {
         if (!arquenzaDropdown.contains(e.target)) {
           arquenzaDropdown.classList.remove("open");
@@ -903,39 +259,39 @@
       });
     }
 
+    // Form handling with RGPD validation
     const form = document.getElementById("contactForm");
-    const successBox = document.getElementById("formSuccess");
-    const errorBox = document.getElementById("formError");
+    const successMsg = document.getElementById("formSuccess");
+    const errorMsg = document.getElementById("formError");
 
     if (form) {
-      form.addEventListener("submit", async function (e) {
+      form.addEventListener("submit", async function(e) {
         e.preventDefault();
-
-        successBox.classList.remove("success");
-        errorBox.classList.remove("error");
-
-        const formData = new FormData(form);
-
+        const rgpd = document.getElementById("rgpd");
+        if (!rgpd.checked) {
+          rgpd.setCustomValidity("Debes aceptar la política de privacidad para continuar.");
+          rgpd.reportValidity();
+          return;
+        }
+        rgpd.setCustomValidity("");
+        const submitBtn = form.querySelector('[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
         try {
           const response = await fetch(form.action, {
             method: "POST",
-            body: formData
+            body: new FormData(form),
           });
-
-          const result = await response.json();
-
-          if (result.success) {
-            form.reset();
-            successBox.classList.add("success");
-            errorBox.classList.remove("error");
-            successBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          if (response.ok) {
+            form.style.display = "none";
+            successMsg.style.display = "block";
           } else {
-            errorBox.classList.add("error");
-            successBox.classList.remove("success");
+            throw new Error("Error");
           }
-        } catch (error) {
-          errorBox.classList.add("error");
-          successBox.classList.remove("success");
+        } catch (err) {
+          errorMsg.style.display = "block";
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Enviar solicitud";
         }
       });
     }

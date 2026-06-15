@@ -2,29 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.veronicasalamanca.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.veronicasalamanca.com/prevenza/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.veronicasalamanca.com/equilibrate/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.veronicasalamanca.com/arquenza/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.veronicasalamanca.com/arquenza/familias/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.veronicasalamanca.com/arquenza/experiencias/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.veronicasalamanca.com/sobre-mi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.veronicasalamanca.com/contacto/</loc>
-  </url>
-  <url>
-    <loc>https://www.veronicasalamanca.com/aviso-legal/</loc>
-  </url>
-  <url>
-    <loc>https://www.veronicasalamanca.com/privacidad/</loc>
-  </url>
-  <url>
-    <loc>https://www.veronicasalamanca.com/cookies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

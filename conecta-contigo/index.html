@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REGALO: Audio Observar y Aceptar | Verónica Salamanca</title>
+  <meta name="description" content="Recibe gratis el audio guiado de Verónica Salamanca para parar, escuchar tu cuerpo y conectar contigo en 10 minutos." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://www.veronicasalamanca.com/conecta-contigo/" />
+  <meta property="og:title" content="REGALO: Audio Observar y Aceptar — Verónica Salamanca" />
+  <meta property="og:description" content="Un audio guiado de 10 minutos para parar, escuchar tu cuerpo y conectar contigo. Gratuito." />
+  <meta property="og:url" content="https://www.veronicasalamanca.com/conecta-contigo/" />
+  <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <link rel="icon" type="image/png" href="/images/Logo%20Visual.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- URL del audio en Google Drive -->
+  <!-- AUDIO URL: https://drive.google.com/file/d/1uRB6qqEg-x9Kn_EvbPBjDpd8UesJ_dzs/view?usp=sharing -->
+  <!-- Para la entrega automática necesitamos el link de descarga directa -->
+  <!-- Direct download: https://drive.google.com/uc?export=download&id=1uRB6qqEg-x9Kn_EvbPBjDpd8UesJ_dzs -->
+
+  <style>
+    .landing-hero {
+      background: linear-gradient(160deg, #f5f0e8 0%, #e8dff0 50%, #dce9e3 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .landing-hero .eyebrow { background: rgba(185,176,200,0.25); color: var(--lilac-500); }
+
+    .audio-preview {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      max-width: 560px;
+      margin: 0 auto 42px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(185,176,200,0.25);
+    }
+
+    .audio-cover {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    .audio-preview h3 { font-size: 1.3rem; margin-bottom: 6px; }
+    .audio-preview p { font-size: 0.92rem; color: var(--text-500); margin: 0; }
+    .audio-lock { color: var(--lilac-500); font-size: 0.88rem; margin-top: 12px; font-style: italic; }
+
+    .benefit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .benefit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1rem;
+      color: var(--text-700);
+    }
+
+    .benefit-list li .b-icon {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: rgba(167,198,183,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    .audio-moments {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .audio-moment {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      text-align: center;
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+    }
+
+    .audio-moment .moment-num {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, rgba(185,176,200,0.3), rgba(167,198,183,0.3));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cinzel", serif;
+      font-weight: 700;
+      color: var(--green-900);
+      margin: 0 auto 14px;
+    }
+
+    .audio-moment h3 { font-size: 1rem; margin-bottom: 8px; }
+    .audio-moment p { font-size: 0.88rem; color: var(--text-500); margin: 0; }
+
+    .form-landing {
+      background: linear-gradient(135deg, rgba(167,198,183,0.1), rgba(185,176,200,0.1));
+      border-radius: var(--radius-xl);
+      padding: 42px;
+      max-width: 560px;
+      margin: 0 auto;
+      border: 1.5px solid rgba(185,176,200,0.3);
+    }
+
+    .gracias-box {
+      display: none;
+      text-align: center;
+      padding: 48px 32px;
+      background: linear-gradient(135deg, rgba(167,198,183,0.15), rgba(185,176,200,0.15));
+      border-radius: var(--radius-xl);
+      max-width: 560px;
+      margin: 0 auto;
+      border: 1.5px solid var(--mint-300);
+    }
+
+    .gracias-box .audio-icon-big { font-size: 4rem; margin-bottom: 16px; }
+    .gracias-box h2 { font-size: 1.8rem; margin-bottom: 14px; }
+    .gracias-box p { color: var(--text-700); margin-bottom: 16px; }
+    .gracias-box .audio-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-900);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      margin: 8px 0 24px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .gracias-box .audio-link-btn:hover { transform: translateY(-2px); }
+
+    .vero-mini {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-card);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .vero-mini-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      min-width: 72px;
+    }
+
+    .vero-mini p { margin: 0; font-size: 0.92rem; color: var(--text-700); }
+    .vero-mini strong { color: var(--green-900); display: block; margin-bottom: 4px; font-size: 1rem; }
+
+    .landing-footer {
+      background: var(--green-900);
+      color: rgba(255,255,255,0.75);
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .landing-footer a { color: rgba(255,255,255,0.75); text-decoration: underline; }
+
+    @media(max-width:720px){
+      .audio-moments { grid-template-columns: 1fr; }
+      .form-landing { padding: 28px 22px; }
+      .vero-mini { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER MINIMAL -->
+  <header style="background:rgba(102,123,115,0.96);padding:16px 0;position:sticky;top:0;z-index:100;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;">
+      <a href="/">
+        <img src="/images/Logo fondo transparente.png" alt="Verónica Salamanca" style="height:44px;width:auto;" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="landing-hero">
+      <div class="container" style="max-width:680px;">
+        <span class="eyebrow">🎧 Audio guiado gratuito</span>
+        <h1 style="font-size:clamp(2rem,5vw,3.4rem);margin-bottom:18px;">Llevas tiempo sin escucharte.<br>Este audio es el principio de volver a ti.</h1>
+        <p class="lead" style="max-width:540px;margin:0 auto 32px;">
+          10 minutos. Voz de Verónica. Para parar, sentir tu cuerpo y detectar lo que llevas semanas sin atender.
+        </p>
+
+        <div class="audio-preview">
+          <div class="audio-cover">🎧</div>
+          <h3>REGALO: Observar y Aceptar</h3>
+          <p>Audio guiado · 10 minutos · Voz de Verónica Salamanca</p>
+          <p class="audio-lock">🔒 Déjame tu nombre y email para recibirlo ahora mismo</p>
+        </div>
+
+        <a href="#formulario" class="btn btn-primary" style="font-size:1.05rem;min-height:58px;padding:0 40px;">Quiero el audio gratuito →</a>
+        <p style="font-size:0.85rem;color:var(--text-500);margin-top:12px;">Sin spam. Sin compromisos. Solo el audio.</p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="section-tight">
+      <div class="container" style="max-width:680px;">
+        <div class="section-head">
+          <span class="eyebrow">¿Te reconoces aquí?</span>
+          <h2>¿Cuándo fue la última vez que te preguntaste cómo estabas de verdad?</h2>
+        </div>
+        <p style="font-size:1.05rem;color:var(--text-700);line-height:1.8;">
+          La mayoría de mujeres que sostienen, cuidan y trabajan van acumulando sin darse cuenta. El cuerpo avisa de formas pequeñas — tensión en los hombros, cansancio que no desaparece con el descanso, esa sensación de ir siempre un paso por detrás.
+        </p>
+        <p style="font-size:1.05rem;color:var(--text-700);line-height:1.8;">
+          Este audio es un espacio de 10 minutos para que eso no llegue al punto de parada total.
+        </p>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section-tight" style="background:var(--cream-100);">
+      <div class="container" style="max-width:680px;">
+        <div class="section-head">
+          <span class="eyebrow">En 10 minutos vas a poder</span>
+          <h2>Lo que te lleva el audio.</h2>
+        </div>
+        <ul class="benefit-list">
+          <li>
+            <span class="b-icon">👂</span>
+            <span><strong>Escuchar tu cuerpo</strong> sin necesitar ninguna experiencia previa en meditación o técnicas de relajación.</span>
+          </li>
+          <li>
+            <span class="b-icon">🔍</span>
+            <span><strong>Detectar dónde acumulas tensión</strong> o saturación emocional y energética en este momento.</span>
+          </li>
+          <li>
+            <span class="b-icon">🌿</span>
+            <span><strong>Recuperar presencia</strong> en el momento actual. Salir del piloto automático, aunque sea durante 10 minutos.</span>
+          </li>
+          <li>
+            <span class="b-icon">💡</span>
+            <span><strong>Identificar qué necesitas ahora</strong> — no en general, no en abstracto. Hoy, en este momento concreto.</span>
+          </li>
+          <li>
+            <span class="b-icon">✨</span>
+            <span><strong>Volver diferente.</strong> Al final del audio tendrás más información sobre ti misma que en toda la semana.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUÉ CONTIENE -->
+    <section class="section-tight">
+      <div class="container" style="max-width:800px;">
+        <div class="section-head">
+          <span class="eyebrow">Dentro del audio</span>
+          <h2>Un recorrido en tres momentos.</h2>
+          <p>Grabado con la voz de Verónica Salamanca. Solo necesitas 10 minutos y un lugar donde sentarte o tumbarte.</p>
+        </div>
+
+        <div class="audio-moments">
+          <div class="audio-moment">
+            <div class="moment-num">1</div>
+            <h3>Parar y llegar</h3>
+            <p>Respiración guiada para salir del modo "hacer" y entrar en el modo "sentir". Para donde estés y como estés.</p>
+          </div>
+          <div class="audio-moment">
+            <div class="moment-num">2</div>
+            <h3>Escuchar</h3>
+            <p>Un recorrido por las zonas de tu cuerpo donde se acumula lo que no se ha procesado. Sin forzar. Solo observar.</p>
+          </div>
+          <div class="audio-moment">
+            <div class="moment-num">3</div>
+            <h3>Reconocer</h3>
+            <p>Preguntas internas suaves para que puedas identificar dónde estás energéticamente y qué necesitas ahora.</p>
+          </div>
+        </div>
+
+        <!-- FRAGMENTO TRANSCRIPCIÓN -->
+        <div style="background:rgba(185,176,200,0.12);border-radius:18px;padding:28px 32px;margin-top:36px;border-left:4px solid var(--lilac-300);">
+          <p style="font-style:italic;font-size:1rem;line-height:1.9;color:var(--text-700);margin:0;">
+            "Apoya los pies en el suelo. Suelta los hombros. Respira profundo y suelta el aire muy despacio. Solo observar cómo estás, sin cambiarlo, sin modificarlo. Si hay ruido, déjalo estar. Si hay cansancio, acéptalo. Respira. A veces solo se necesita presencia. Observa tu cuerpo. Siente lo que te está diciendo..."
+          </p>
+          <p style="font-size:0.85rem;color:var(--text-500);margin:12px 0 0;font-style:italic;">— Fragmento del audio</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE VERÓNICA -->
+    <section class="section-tight" style="background:var(--cream-100);">
+      <div class="container" style="max-width:680px;">
+        <div class="section-head">
+          <span class="eyebrow">Quién te acompaña</span>
+          <h2>Verónica Salamanca</h2>
+        </div>
+        <div class="vero-mini">
+          <!-- FOTO NUEVA: /images/foto-conecta.jpg -->
+          <img class="vero-mini-photo" src="/images/foto-conecta.jpg" alt="Verónica Salamanca" loading="lazy" />
+          <div>
+            <p>
+              <strong>Fundadora de Equilíbrate</strong>
+              Trabajo con mujeres que sostienen demasiado y han perdido el hilo consigo mismas. Desde hace años acompaño procesos de organización personal, regulación del sistema nervioso y reconexión con el propio cuerpo y energía.
+            </p>
+            <p style="margin-top:8px;">Este audio es la primera herramienta que suelo dar a las mujeres con las que trabajo. <strong>Escucharte es el primer paso.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="formulario" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Recíbelo ahora</span>
+          <h2>REGALO: Audio Observar y Aceptar</h2>
+          <p>Déjame tu nombre y email. El audio llega inmediatamente.</p>
+        </div>
+
+        <!-- FORMULARIO ACTIVO -->
+        <div id="formContainer">
+          <div class="form-landing">
+            <form id="audioForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <input type="hidden" name="access_key" value="e8ba3dc7-de20-4ebb-86ac-5c0612808f6f" />
+              <input type="hidden" name="subject" value="Nueva solicitud de audio — Observar y Aceptar" />
+              <input type="hidden" name="from_name" value="Landing Conecta Contigo" />
+              <input type="hidden" name="redirect" value="" />
+              <!-- El enlace del audio se incluye en el mensaje para que llegue al email de confirmación -->
+              <input type="hidden" name="audio_link" value="https://drive.google.com/uc?export=download&id=1uRB6qqEg-x9Kn_EvbPBjDpd8UesJ_dzs" />
+              <input type="checkbox" name="botcheck" style="display:none;" />
+
+              <div class="form-grid" style="grid-template-columns:1fr;">
+                <div class="field">
+                  <label for="nombre_audio">Tu nombre *</label>
+                  <input type="text" id="nombre_audio" name="nombre" placeholder="¿Cómo te llamas?" required />
+                </div>
+
+                <div class="field">
+                  <label for="email_audio">Tu email *</label>
+                  <input type="email" id="email_audio" name="email" placeholder="Donde te enviamos el audio" required />
+                </div>
+
+                <div class="field">
+                  <div class="rgpd-row">
+                    <input type="checkbox" id="rgpd_audio" name="rgpd" required />
+                    <label for="rgpd_audio" style="font-weight:400;font-size:0.84rem;">Acepto recibir el audio y comunicaciones ocasionales de Verónica Salamanca. Puedo darme de baja en cualquier momento. <a href="/privacidad/" target="_blank">Política de privacidad</a>.</label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;min-height:58px;">
+                    🎧 Quiero el audio gratuito
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- PÁGINA DE GRACIAS (oculta hasta envío) -->
+        <div class="gracias-box" id="graciasBox">
+          <div class="audio-icon-big">🎧</div>
+          <h2>Lo tienes.</h2>
+          <p style="font-size:1.05rem;">El audio está listo para escucharse. Puedes abrirlo ahora mismo o guardarlo para cuando tengas 10 minutos para ti.</p>
+          <a class="audio-link-btn" href="https://drive.google.com/uc?export=download&id=1uRB6qqEg-x9Kn_EvbPBjDpd8UesJ_dzs" target="_blank" rel="noopener">
+            🎧 Escuchar el audio ahora
+          </a>
+          <p style="font-size:0.9rem;color:var(--text-500);">También recibirás el enlace en tu email en los próximos minutos.</p>
+          <hr style="border:none;border-top:1px solid var(--mint-300);margin:24px 0;" />
+          <p style="font-size:0.95rem;color:var(--text-700);">¿Quieres saber más sobre cómo trabajar juntas?</p>
+          <a class="btn btn-ghost" href="/equilibrate/">Ver Equilíbrate →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-tight" style="background:var(--cream-100);">
+      <div class="container" style="max-width:680px;">
+        <div class="section-head">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Resuelvo las dudas más habituales.</h2>
+        </div>
+
+        <details class="faq-item">
+          <summary>¿Necesito experiencia meditando para escuchar el audio?</summary>
+          <p>Para nada. Este audio está diseñado para personas que nunca han meditado. Solo necesitas 10 minutos y un lugar donde sentarte o tumbarte tranquila.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuándo recibiré el audio?</summary>
+          <p>En cuanto envíes el formulario, el audio estará disponible para que lo abras inmediatamente. También recibirás el enlace por email en los próximos minutos.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Es realmente gratuito?</summary>
+          <p>Sí. Sin coste, sin truco, sin suscripción de pago. Es una herramienta que quiero que tengas.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué pasa después de recibir el audio?</summary>
+          <p>Nada obligatorio. Si el audio te resulta útil y quieres explorar cómo podemos trabajar juntas, tendrás la opción de hacerlo. Si no, ningún problema. Solo recibirás comunicaciones ocasionales de Verónica — y puedes darte de baja cuando quieras.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Puedo escucharlo más de una vez?</summary>
+          <p>Sí, y de hecho te lo recomiendo. El estado en el que llegas al audio cambia cada vez. Escucharlo en distintos momentos del día o de la semana da resultados distintos.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="landing-footer">
+    <p style="margin:0;">© Verónica Salamanca · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/contacto/">Contacto</a></p>
+  </div>
+
+  <script>
+    const audioForm = document.getElementById("audioForm");
+    const formContainer = document.getElementById("formContainer");
+    const graciasBox = document.getElementById("graciasBox");
+
+    if (audioForm) {
+      audioForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const rgpd = document.getElementById("rgpd_audio");
+        if (!rgpd.checked) {
+          rgpd.setCustomValidity("Debes aceptar la política de privacidad.");
+          rgpd.reportValidity();
+          return;
+        }
+        rgpd.setCustomValidity("");
+
+        const submitBtn = audioForm.querySelector('[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Enviando...";
+
+        try {
+          const response = await fetch(audioForm.action, {
+            method: "POST",
+            body: new FormData(audioForm),
+          });
+
+          if (response.ok) {
+            formContainer.style.display = "none";
+            graciasBox.style.display = "block";
+            graciasBox.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else {
+            throw new Error("Error");
+          }
+        } catch (err) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "🎧 Quiero el audio gratuito";
+          alert("Ha habido un problema. Por favor, escríbeme directamente a escribenos@veronicasalamanca.com");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
