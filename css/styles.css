@@ -357,14 +357,16 @@ p {
 
 .card-media {
   background: linear-gradient(180deg, #f6f1e8 0%, #ebe3d6 100%);
-  min-height: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  aspect-ratio: 4 / 3;
 }
 
-.card-media img { width: 100%; height: 240px; object-fit: cover; }
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 
 .card-body, .step-card, .why-card, .line-card { padding: 24px; }
 
@@ -645,8 +647,10 @@ textarea { min-height: 130px; resize: vertical; }
   width: 100%;
   border-radius: var(--radius-xl);
   object-fit: cover;
+  object-position: center top;
   box-shadow: var(--shadow-soft);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
+  max-height: 580px;
 }
 
 .hero-badge {
