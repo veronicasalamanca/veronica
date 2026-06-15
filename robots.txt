@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /conecta-contigo/
 
 Sitemap: https://www.veronicasalamanca.com/sitemap.xml
