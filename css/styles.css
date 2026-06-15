@@ -767,3 +767,91 @@ textarea { min-height: 130px; resize: vertical; }
   .form-grid { grid-template-columns: 1fr; }
   .esferas-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 }
+
+/* ── MOBILE EXTRA (480px y menos) ── */
+@media (max-width: 480px) {
+  h1 { font-size: clamp(1.9rem, 9vw, 2.4rem) !important; }
+  h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+
+  .hero { padding: 40px 0; }
+  .hero-photo { max-height: 360px; }
+  .hero-badge { display: none; }
+
+  .ladder-item { padding: 20px 16px; }
+  .ladder-item .ladder-num { width: 40px; height: 40px; }
+
+  .esfera-item img { width: 72px; height: 72px; }
+
+  .vero-mini { flex-direction: column; text-align: center; }
+  .vero-mini-photo { margin: 0 auto; }
+
+  .lead-magnet-box { padding: 24px 18px; }
+  .cta-box { padding: 24px 18px; }
+  .form-landing { padding: 24px 18px; }
+
+  .work-step { padding: 20px 18px; }
+  .service-card { padding: 20px 18px; }
+  .case-card { padding: 20px 18px; }
+  .card-body { padding: 20px 18px; }
+
+  .footer-links { flex-direction: column; gap: 10px; }
+}
+
+/* ── HERO FOTO: no overflow en móvil ── */
+@media (max-width: 1080px) {
+  .hero-photo {
+    max-height: 420px;
+    width: 100%;
+  }
+
+  .hero-photo-wrap {
+    width: 100%;
+  }
+
+  /* Sección intro strip centrada en móvil */
+  .intro-box { text-align: center; }
+  .intro-box .eyebrow { display: inline-block; }
+
+  /* Why grid colapsa a 2 columnas antes de llegar a 1 */
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Testimonials en móvil */
+  .testimonial-card { padding: 20px; }
+  .testimonial-card::before { font-size: 3.5rem; }
+
+  /* Normativa grid */
+  .normativa-grid { grid-template-columns: 1fr; }
+
+  /* Audio moments */
+  .audio-moments { grid-template-columns: 1fr; }
+
+  /* Experiencias page h1 fix */
+  .hero-copy h1[style] { font-size: clamp(1.7rem, 5vw, 2.6rem) !important; }
+}
+
+@media (max-width: 720px) {
+  /* Why grid a 1 columna en móvil pequeño */
+  .why-grid { grid-template-columns: 1fr; }
+
+  /* Secciones con padding reducido */
+  .about-grid { gap: 20px; }
+  .two-col { gap: 16px; }
+
+  /* Ladder items más compactos */
+  .ladder-grid { gap: 14px; }
+  .ladder-item { padding: 20px 16px; }
+
+  /* Work steps compactos */
+  .work-steps { gap: 14px; }
+
+  /* Esfera labels menores */
+  .esfera-item span { font-size: 0.76rem; }
+  .esfera-item p { font-size: 0.78rem !important; }
+
+  /* Botones WhatsApp/Calendly en hero bien visibles */
+  .btn-row .btn { font-size: 0.9rem; padding: 0 18px; }
+
+  /* Footer en columna */
+  .footer-grid { flex-direction: column; gap: 14px; }
+  .footer-links { flex-wrap: wrap; gap: 12px 18px; }
+}
