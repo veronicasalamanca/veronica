@@ -358,14 +358,14 @@ p {
 .card-media {
   background: linear-gradient(180deg, #f6f1e8 0%, #ebe3d6 100%);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
 }
 
 .card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 30%;
 }
 
 .card-body, .step-card, .why-card, .line-card { padding: 24px; }
