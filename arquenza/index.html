@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arquenza | Filosofía de vida, familia y transformación consciente</title>
-  <meta name="description" content="Arquenza: acompañamiento familiar, filosofía de vida, Aletia y Quinta Vibración. Para cuando lo que vives necesita una mirada más profunda." />
+  <meta name="description" content="Arquenza: el universo vibracional de Verónica Salamanca. Aletia, QuintaVibración y Equilíbrate. Acompañamiento familiar, experiencias y filosofía de vida." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.veronicasalamanca.com/arquenza/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Arquenza | Filosofía de vida, familia y transformación consciente" />
-  <meta property="og:description" content="Acompañamiento familiar, filosofía de vida y experiencias de transformación con Verónica Salamanca." />
+  <meta property="og:description" content="Acompañamiento familiar con QuintaVibración y experiencias de Aletia. El universo vibracional de Verónica Salamanca." />
   <meta property="og:url" content="https://www.veronicasalamanca.com/arquenza/" />
   <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
   <meta property="og:image:width" content="1200" />
@@ -23,6 +23,96 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <style>
+    .universo-intro {
+      background: linear-gradient(135deg, rgba(167,198,183,0.08), rgba(185,176,200,0.08));
+      border-radius: var(--radius-xl);
+      padding: 38px 42px;
+      margin-bottom: 52px;
+      border: 1px solid rgba(185,176,200,0.2);
+    }
+    .universo-intro p { font-size: 1.05rem; margin: 0 0 12px; }
+    .universo-intro p:last-child { margin: 0; }
+
+    .pilares-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .pilar-chip {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 18px 20px;
+      border: 1px solid rgba(102,123,115,0.1);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+    }
+
+    .pilar-chip strong {
+      display: block;
+      font-family: "Cinzel", serif;
+      font-size: 0.9rem;
+      color: var(--green-900);
+      margin-bottom: 6px;
+    }
+
+    .pilar-chip p { font-size: 0.85rem; color: var(--text-500); margin: 0; }
+
+    .arquenza-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 0;
+    }
+
+    .arquenza-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .arquenza-card-media {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .arquenza-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .arquenza-card-body { padding: 32px; }
+    .arquenza-card-logo { width: 72px; margin-bottom: 16px; }
+    .arquenza-card-body h3 { margin-bottom: 12px; }
+    .arquenza-card-body p { font-size: 0.96rem; line-height: 1.7; }
+
+    .banner-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 42px;
+    }
+
+    .banner-pair .banner-wrap { margin: 0; }
+
+    @media(max-width:1080px){
+      .arquenza-cards { grid-template-columns: 1fr; }
+      .pilares-row { grid-template-columns: 1fr; }
+      .banner-pair { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width:720px){
+      .universo-intro { padding: 24px 20px; }
+      .arquenza-card-body { padding: 22px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -38,9 +128,9 @@
         <div class="has-dropdown" id="arquenzaDropdown">
           <button class="dropdown-toggle" type="button" aria-expanded="false">Arquenza</button>
           <div class="dropdown-menu">
-            <a href="/arquenza/">Arquenza<span>Filosofía de vida, familia y transformación consciente.</span></a>
-            <a href="/arquenza/familias/">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
-            <a href="/arquenza/experiencias/">Experiencias<span>Aletia y Quinta Vibración: talleres, presencia y transformación.</span></a>
+            <a href="/arquenza/">Arquenza<span>El universo vibracional: Aletia, QuintaVibración y Equilíbrate.</span></a>
+            <a href="/arquenza/familias/">Familias<span>QuintaVibración para sanar y sostener el vínculo familiar.</span></a>
+            <a href="/arquenza/experiencias/">Experiencias<span>Aletia vivida: talleres y experiencias de transformación.</span></a>
           </div>
         </div>
         <a href="/sobre-mi/">Sobre mí</a>
@@ -65,6 +155,7 @@
         <a href="/contacto/">Contacto</a>
         <div class="mobile-contact-row">
           <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20Arquenza." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
         </div>
       </div>
     </div>
@@ -77,20 +168,19 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Arquenza</span>
-          <h1>Una forma más consciente de sostener la vida, los vínculos y lo que te transforma.</h1>
+          <h1>Una forma consciente de sostener la vida, los vínculos y lo que te transforma.</h1>
           <p class="lead">
-            Arquenza es el universo más amplio de este trabajo. Aquí cabe lo que la empresa y la organización personal no pueden contener: la familia, la filosofía de vida y la experiencia de transformarse desde adentro.
+            Arquenza es el universo vibracional que reúne tres pilares: Aletia inspira, QuintaVibración transforma y Equilíbrate sostiene. Juntos forman una estructura orgánica, emocional y espiritual para vivir con más verdad.
           </p>
           <p>
-            Entra por donde te llame. Hay dos puertas claras: el acompañamiento a familias en procesos complejos, y las experiencias de transformación con Aletia y Quinta Vibración.
+            Hay dos caminos de entrada: el acompañamiento a familias a través de QuintaVibración, y las experiencias donde se vive y se siente Aletia desde el otro lado.
           </p>
           <div class="btn-row">
             <a class="btn btn-primary" href="/arquenza/familias/">Acompañamiento familiar</a>
-            <a class="btn btn-tertiary" href="/arquenza/experiencias/">Experiencias y talleres</a>
+            <a class="btn btn-tertiary" href="/arquenza/experiencias/">Experiencias Aletia</a>
           </div>
         </div>
         <div class="hero-photo-wrap">
-          <!-- FOTO NUEVA: /images/foto-arquenza.jpg -->
           <img class="hero-photo" src="/images/foto-arquenza.jpg" alt="Verónica Salamanca, universo Arquenza" loading="eager" />
           <div class="hero-badge">
             <img src="/images/Logo Quintavibracion.png" alt="Logo Arquenza" width="90" loading="lazy" />
@@ -99,59 +189,129 @@
       </div>
     </section>
 
-    <!-- DOS PUERTAS -->
+    <!-- EL UNIVERSO -->
     <section class="section-tight" style="background:var(--cream-100);">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Por dónde entrar</span>
-          <h2>Dos caminos. Un mismo criterio de fondo.</h2>
-          <p>Elige la vía que más se acerque a lo que estás viviendo ahora.</p>
+          <span class="eyebrow">El universo</span>
+          <h2>Tres pilares. Un mismo pulso.</h2>
+          <p>Arquenza no es una metodología. Es un ecosistema vibracional vivo donde filosofía, método y estructura se entrelazan para acompañar la vida desde adentro.</p>
         </div>
 
-        <div class="two-col">
-          <article class="card" style="overflow:visible;">
-            <div class="card-body" style="padding:32px;">
-              <img src="/images/Logo Aletia.png" alt="Logo Aletia" style="width:80px;margin-bottom:18px;" loading="lazy" />
-              <h3>Para familias</h3>
-              <p style="font-size:1rem;line-height:1.7;">
-                <strong>La protección del hogar emocional de tu familia.</strong>
-              </p>
-              <p>
-                Cuando algo se mueve dentro de la familia — una crisis, un proceso de duelo, un conflicto que no se resuelve, una relación que pide más presencia — el acompañamiento familiar de Arquenza ofrece un espacio para sostener ese proceso con más conciencia y menos daño.
-              </p>
-              <p>
-                Sesiones presenciales y online. En Madrid con mayor frecuencia, pero con disponibilidad en otras ubicaciones también.
-              </p>
-              <a class="btn btn-primary" href="/arquenza/familias/" style="margin-top:10px;">Ver acompañamiento familiar</a>
-            </div>
-          </article>
+        <div class="universo-intro">
+          <p><strong>Aletia inspira.</strong> Es el alma. La verdad encarnada. La brújula emocional y energética que le da sentido a todo lo demás. Sin Aletia, los métodos se vuelven técnicos y los sistemas, vacíos.</p>
+          <p><strong>QuintaVibración transforma.</strong> Es el método. A través de sus tres movimientos (Reconocer, Sanar, Elevar) y sus cinco esferas, permite liberar lo que pesa y recuperar lo esencial. No desde la mente. Desde el cuerpo.</p>
+          <p><strong>Equilíbrate sostiene.</strong> Es la tierra. La estructura que permite que el cambio no sea momentáneo sino duradero. Sin Equilíbrate, la filosofía se evapora. Con él, todo lo vivido se ancla.</p>
+        </div>
 
-          <article class="card" style="overflow:visible;">
-            <div class="card-body" style="padding:32px;">
-              <img src="/images/Logo Quintavibracion.png" alt="Logo Quinta Vibración" style="width:80px;margin-bottom:18px;" loading="lazy" />
-              <h3>Experiencias y talleres</h3>
-              <p style="font-size:1rem;line-height:1.7;">
-                <strong>Aletia y Quinta Vibración: transformación vibracional y presencia consciente.</strong>
-              </p>
-              <p>
-                <strong>Aletia</strong> es una filosofía de vida — una forma de leer lo cotidiano con más profundidad y sentido.<br>
-                <strong>Quinta Vibración</strong> son las experiencias: talleres, encuentros y vivencias diseñadas para que la transformación se sienta, no solo se entienda.
-              </p>
-              <p>
-                Disponibles en formato presencial (Madrid y otras ubicaciones) y online.
-              </p>
-              <a class="btn btn-tertiary" href="/arquenza/experiencias/" style="margin-top:10px;">Ver experiencias y talleres</a>
-            </div>
-          </article>
+        <div class="pilares-row">
+          <div class="pilar-chip">
+            <strong>En el individuo</strong>
+            <p>Despierta (Aletia), sana (QuintaVibración), se ordena (Equilíbrate).</p>
+          </div>
+          <div class="pilar-chip">
+            <strong>En la familia</strong>
+            <p>Honra (Aletia), repara (QuintaVibración), estructura (Equilíbrate).</p>
+          </div>
+          <div class="pilar-chip">
+            <strong>En las relaciones</strong>
+            <p>Conecta (Aletia), libera (QuintaVibración), sostiene (Equilíbrate).</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BANNER -->
-    <section class="section-tight">
+    <!-- LAS 5 ESFERAS -->
+    <section class="section">
       <div class="container">
-        <div class="banner-wrap">
-          <img src="/images/Banner Quintavibracion v4.png" alt="Quinta Vibración — experiencias de transformación" loading="lazy" />
+        <div class="section-head">
+          <span class="eyebrow">QuintaVibración · Las 5 Esferas</span>
+          <h2>Las dimensiones del ser humano que QuintaVibración trabaja.</h2>
+          <p>Cada esfera representa una dimensión. Todas se entrelazan y se trabajan de forma simultánea y cíclica — porque nada de lo que somos funciona por separado.</p>
+        </div>
+
+        <div class="esferas-grid">
+          <div class="esfera-item">
+            <img src="/images/ESFERA CUERPO.png" alt="Esfera Cuerpo" loading="lazy" />
+            <span>Cuerpo</span>
+            <p style="font-size:0.84rem;color:var(--text-500);margin:0;text-align:center;">El portal de entrada. Donde la emoción se densifica y la energía se estanca. Movimiento, tacto, respiración.</p>
+          </div>
+          <div class="esfera-item">
+            <img src="/images/ESFERA EMOCION.png" alt="Esfera Emoción" loading="lazy" />
+            <span>Emoción</span>
+            <p style="font-size:0.84rem;color:var(--text-500);margin:0;text-align:center;">Dar voz al cuerpo para que la emoción no se quede atrapada. Identificación, expresión, canalización.</p>
+          </div>
+          <div class="esfera-item">
+            <img src="/images/ESFERA ENERGIA.png" alt="Esfera Energía" loading="lazy" />
+            <span>Energía</span>
+            <p style="font-size:0.84rem;color:var(--text-500);margin:0;text-align:center;">Toda emoción tiene un campo vibratorio. Frecuencia, dirección, desbloqueo.</p>
+          </div>
+          <div class="esfera-item">
+            <img src="/images/ESFERA RITUAL.png" alt="Esfera Ritual" loading="lazy" />
+            <span>Ritual</span>
+            <p style="font-size:0.84rem;color:var(--text-500);margin:0;text-align:center;">Neuroplasticidad sagrada. Los rituales fijan la transformación y crean nuevas rutas energéticas.</p>
+          </div>
+          <div class="esfera-item">
+            <img src="/images/ESFERA ESENCIA.png" alt="Esfera Esencia" loading="lazy" />
+            <span>Esencia</span>
+            <p style="font-size:0.84rem;color:var(--text-500);margin:0;text-align:center;">El lugar silencioso donde todo confluye. Integración, presencia, verdad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAS DOS PUERTAS -->
+    <section class="section-tight" style="background:var(--cream-100);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Por dónde entrar</span>
+          <h2>Dos caminos. Un mismo universo.</h2>
+        </div>
+
+        <div class="arquenza-cards">
+
+          <!-- FAMILIAS → QUINTAVIBRACIÓN -->
+          <article class="arquenza-card">
+            <div class="arquenza-card-media">
+              <img src="/images/foto-familias.jpg" alt="Acompañamiento familiar con QuintaVibración" loading="lazy" />
+            </div>
+            <div class="arquenza-card-body">
+              <img class="arquenza-card-logo" src="/images/Logo Quintavibracion.png" alt="Logo QuintaVibración" loading="lazy" />
+              <h3>Familias</h3>
+              <p><strong>QuintaVibración como vehículo para reparar y sostener el vínculo familiar.</strong></p>
+              <p>
+                Cuando algo se mueve en la familia — una separación, una dinámica que se repite, una relación que pide otra mirada — QuintaVibración ofrece el método para trabajar desde las 5 esferas: cuerpo, emoción, energía, ritual y esencia. No desde el conflicto. Desde la frecuencia que sostiene el vínculo.
+              </p>
+              <a class="btn btn-primary" href="/arquenza/familias/" style="margin-top:16px;">Ver acompañamiento familiar</a>
+            </div>
+          </article>
+
+          <!-- EXPERIENCIAS → ALETIA -->
+          <article class="arquenza-card">
+            <div class="arquenza-card-media">
+              <img src="/images/foto-arquenza.jpg" alt="Experiencias y talleres Aletia" loading="lazy" />
+            </div>
+            <div class="arquenza-card-body">
+              <img class="arquenza-card-logo" src="/images/Logo Aletia.png" alt="Logo Aletia" loading="lazy" />
+              <h3>Experiencias y Talleres</h3>
+              <p><strong>Aletia vivida. La filosofía que se atraviesa desde el otro lado.</strong></p>
+              <p>
+                Aletia no se explica. Se encarna. Las experiencias y talleres son el espacio donde dejas de entender Aletia para empezar a sentirla. Donde la verdad revelada, la alegría esencial y la belleza encarnada dejan de ser conceptos y se convierten en algo que vives con el cuerpo.
+              </p>
+              <a class="btn btn-tertiary" href="/arquenza/experiencias/" style="margin-top:16px;">Ver experiencias y talleres</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- BANNERS: Quinta Vibración junto a Familias, Aletia junto a Experiencias -->
+        <div class="banner-pair">
+          <div class="banner-wrap">
+            <img src="/images/Banner Quintavibracion v4.png" alt="QuintaVibración — transformación vibracional familiar" loading="lazy" />
+          </div>
+          <div class="banner-wrap">
+            <img src="/images/Banner Aletia.png" alt="Aletia — filosofía vivida, verdad encarnada" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>

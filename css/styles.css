@@ -121,7 +121,7 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1300;
   background: rgba(102, 123, 115, 0.98);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
@@ -246,13 +246,14 @@ p {
 .mobile-panel {
   display: none;
   position: fixed;
-  inset: 76px 0 0 0;
-  background: rgba(250, 248, 244, 0.98);
-  backdrop-filter: blur(10px);
-  z-index: 1100;
+  inset: 0 0 0 0;
+  padding-top: 88px;
+  padding-bottom: 32px;
+  background: rgba(250, 248, 244, 0.99);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1400;
   overflow-y: auto;
-  border-top: 1px solid rgba(102, 123, 115, 0.12);
-  padding: 18px 0 24px;
 }
 
 .mobile-panel.open { display: block; }
