@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practicar Renacimiento · Arquenza — Verónica Salamanca</title>
+<style>
+  :root{
+    --sage:#6d7d76;
+    --sage-dark:#57655f;
+    --sage-tint:#e9eeec;
+    --cream:#f6f3ee;
+    --panel:#ffffff;
+    --gold:#c9a25a;
+    --lavender:#b3a6c9;
+    --ink:#181715;
+    --muted:#5c6b64;
+    --line:#e3ded4;
+    --radius-card:22px;
+    --radius-pill:100px;
+    --shadow:0 10px 30px rgba(30,35,30,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--cream);color:var(--ink);
+    font-family:'Poppins','Helvetica Neue',Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:760px;margin:0 auto;padding:0 28px;}
+  h1,h2,h3{
+    font-family:'GFS Baskerville','Iowan Old Style',Georgia,serif;
+    font-weight:400;
+    letter-spacing:.01em;
+  }
+  section{padding:76px 0;}
+
+  /* ---------- transiciones suaves, como en la web ---------- */
+  a,button{transition:all .25s ease;}
+  a:hover,button:hover{transform:translateY(-1px);filter:brightness(1.03);}
+
+  /* ---------- header, igual que la nav de la web ---------- */
+  header.nav{
+    background:var(--sage);
+    padding:28px 28px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  header.nav .brandmark{display:flex;align-items:center;gap:14px;}
+  header.nav .brandmark img{width:46px;height:auto;}
+  header.nav .brandmark .word{
+    font-family:'GFS Baskerville',Georgia,serif;
+    color:#fff;font-size:22px;letter-spacing:.03em;
+  }
+  header.nav .breadcrumb{
+    color:#e7ece9;font-size:12.5px;
+    font-family:'Poppins',sans-serif;letter-spacing:.03em;
+  }
+  header.nav .menu-btn{
+    width:46px;height:46px;border-radius:14px;
+    border:1px solid rgba(255,255,255,.4);
+    display:flex;align-items:center;justify-content:center;
+  }
+  header.nav .menu-btn span{display:block;width:18px;height:1.5px;background:#fff;position:relative;}
+  header.nav .menu-btn span:before,header.nav .menu-btn span:after{
+    content:"";position:absolute;left:0;width:18px;height:1.5px;background:#fff;
+  }
+  header.nav .menu-btn span:before{top:-6px;}
+  header.nav .menu-btn span:after{top:6px;}
+
+  /* ---------- hero, degradado verde como la card "Siguiente paso" de la web ---------- */
+  .hero{
+    background:var(--sage);
+    padding:64px 28px 76px;text-align:center;color:#fff;
+  }
+  .hero .eyebrow-pill{
+    display:inline-block;background:rgba(255,255,255,.16);
+    color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    padding:9px 22px;border-radius:var(--radius-pill);margin-bottom:26px;
+    font-family:'Poppins',sans-serif;
+  }
+  .hero h1{
+    font-size:clamp(34px,7vw,54px);color:#fff;margin-bottom:20px;
+    text-transform:uppercase;line-height:1.15;
+  }
+  .hero p.sub{
+    font-size:17px;color:#f0f2ee;max-width:520px;margin:0 auto 34px;
+    font-family:'Poppins',sans-serif;
+  }
+  .btn{
+    display:inline-block;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;
+    padding:17px 34px;border-radius:var(--radius-pill);
+    text-decoration:none;border:none;cursor:pointer;
+  }
+  .btn-white{background:#fff;color:var(--sage-dark);}
+  .btn-gold{background:var(--gold);color:#fff;}
+  .btn-sage{background:var(--sage);color:#fff;}
+  .btn-outline{background:transparent;color:var(--sage);border:1.5px solid var(--sage);}
+  .btn-row{display:flex;flex-direction:column;gap:14px;align-items:center;}
+  @media(min-width:520px){.btn-row.inline{flex-direction:row;justify-content:center;}}
+  .plazas-note{
+    margin-top:22px;font-size:13px;color:#f0f2ee;
+    font-family:'Poppins',sans-serif;letter-spacing:.02em;
+  }
+
+  /* ---------- eyebrow pill sobre fondo crema (como "VISIÓN", "EL UNIVERSO") ---------- */
+  .eyebrow{
+    display:inline-block;background:var(--sage-tint);color:var(--sage-dark);
+    font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    padding:9px 20px;border-radius:var(--radius-pill);margin-bottom:22px;
+    font-family:'Poppins',sans-serif;font-weight:600;
+  }
+  h2.section-title{font-size:30px;color:var(--ink);margin-bottom:20px;text-transform:uppercase;}
+  p.lead{font-size:16.5px;color:var(--muted);max-width:600px;}
+
+  /* ---------- tarjetas blancas, igual que las de la web ---------- */
+  .card{
+    background:var(--panel);border-radius:var(--radius-card);
+    padding:34px;box-shadow:var(--shadow);margin-top:20px;
+  }
+  .card p{color:var(--muted);font-size:15.5px;}
+
+  /* ---------- las 5 fases, imitando las 5 esferas de QuintaVibración ---------- */
+  .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px;}
+  @media(max-width:700px){.grid5{grid-template-columns:1fr 1fr;}}
+  .fase{
+    background:var(--panel);border-radius:18px;padding:22px 14px;text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .fase .ring{
+    width:52px;height:52px;border-radius:50%;margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid var(--gold);
+  }
+  .fase .ring .dot{width:20px;height:20px;border-radius:50%;}
+  .fase .n{font-family:'Poppins',sans-serif;color:var(--gold);font-size:11px;
+    letter-spacing:.08em;text-transform:uppercase;font-weight:600;}
+  .fase h4{font-family:'GFS Baskerville',Georgia,serif;font-size:15px;margin:9px 0 6px;color:var(--ink);}
+  .fase p{font-size:11.5px;color:var(--muted);margin:0;}
+
+  /* ---------- precio ---------- */
+  .price-card{
+    background:var(--panel);border-radius:var(--radius-card);
+    padding:44px;text-align:center;max-width:440px;margin:36px auto;
+    box-shadow:var(--shadow);
+  }
+  .price-card .label{font-family:'Poppins',sans-serif;font-size:11.5px;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.1em;}
+  .price-card .amount{font-family:'GFS Baskerville',Georgia,serif;font-size:46px;color:var(--sage-dark);margin:8px 0;}
+  .price-card .old{color:#b3aca1;text-decoration:line-through;font-size:16px;font-family:'Poppins',sans-serif;}
+  .price-card ul{list-style:none;text-align:left;margin:22px 0;font-size:15px;color:var(--muted);}
+  .price-card ul li{padding:8px 0;border-bottom:1px solid var(--line);}
+  .price-card ul li:last-child{border-bottom:none;}
+
+  table.cal{width:100%;border-collapse:collapse;font-family:'Poppins',sans-serif;font-size:13.5px;margin:26px 0;}
+  table.cal th,table.cal td{text-align:left;padding:12px;border-bottom:1px solid var(--line);}
+  table.cal th{color:var(--sage-dark);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;}
+
+  .prep-list{background:var(--panel);border-radius:var(--radius-card);padding:32px 34px;margin-top:20px;box-shadow:var(--shadow);}
+  .prep-list p{font-size:15px;color:var(--muted);margin:7px 0;font-family:'Poppins',sans-serif;}
+
+  /* ---------- formulario, mismo lenguaje visual que las tarjetas de la web ---------- */
+  form{
+    background:var(--panel);border-radius:var(--radius-card);
+    padding:38px;max-width:480px;margin:0 auto;box-shadow:var(--shadow);
+  }
+  label{
+    display:block;font-family:'Poppins',sans-serif;
+    font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+    margin-bottom:7px;margin-top:20px;font-weight:600;
+  }
+  input,select{
+    width:100%;padding:13px 16px;border-radius:14px;border:1.5px solid var(--line);
+    background:var(--cream);color:var(--ink);font-family:'Poppins',sans-serif;
+    font-size:14.5px;
+  }
+  input:focus,select:focus{outline:none;border-color:var(--sage);}
+  form .btn{width:100%;text-align:center;margin-top:26px;}
+  .whatsapp-note{
+    text-align:center;margin-top:18px;font-size:13px;color:var(--muted);
+    font-family:'Poppins',sans-serif;
+  }
+  .whatsapp-note a{color:var(--sage-dark);font-weight:600;text-decoration:none;}
+
+  .faq{border-bottom:1px solid var(--line);padding:22px 0;}
+  .faq h4{color:var(--sage-dark);font-size:15.5px;margin-bottom:7px;font-weight:600;
+    font-family:'Poppins',sans-serif;}
+  .faq p{color:var(--muted);font-size:14px;}
+
+  footer{
+    background:var(--sage);color:#eef1ee;text-align:center;
+    padding:60px 28px;font-family:'Poppins',sans-serif;font-size:12.5px;
+  }
+  footer img{width:40px;opacity:.9;margin-bottom:14px;}
+  footer .top{font-size:14px;margin-bottom:6px;}
+
+  .payment-steps{
+    background:var(--sage-tint);border:1px solid #d8e1dd;border-radius:18px;
+    padding:24px;margin:26px auto;max-width:480px;
+    font-family:'Poppins',sans-serif;color:var(--muted);
+  }
+  .payment-steps h3{
+    font-family:'GFS Baskerville',Georgia,serif;color:var(--sage-dark);
+    font-size:21px;margin-bottom:12px;text-transform:none;
+  }
+  .payment-steps ol{padding-left:20px;margin:0;}
+  .payment-steps li{margin:9px 0;}
+  .payment-steps a{color:var(--sage-dark);font-weight:600;text-decoration:none;}
+  .secure-note{
+    font-size:12.5px;color:var(--muted);text-align:center;
+    max-width:450px;margin:14px auto 0;font-family:'Poppins',sans-serif;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+NOTA PARA QUIEN MAQUETA ESTA WEB (borrar antes de publicar):
+- Sistema visual calcado del real: verde salvia #6d7d76 (header/CTA),
+  crema #f6f3ee (fondo), dorado #c9a25a (acento, coincide con el oro
+  del logo de Arquenza), lavanda suave #b3a6c9 (acento secundario).
+- Tipografía: GFS Baskerville para titulares (mismo carácter que el
+  serif de "VERÓNICA" en el logo), Poppins para todo el texto de UI,
+  igual que el resto del sitio.
+- Botones: pastilla (border-radius 100px), igual que en la web —
+  blanco sobre verde, dorado como CTA secundario, verde sólido sobre
+  fondo crema, y contorno verde para CTAs terciarios.
+- El header usa el logo de Arquenza (arquenza-logo.png, adjunto). Si
+  prefieres el logo "VERÓNICA Salamanca" de la home, sustitúyelo aquí.
+- El <form> ya está conectado a FormSubmit.co → escribenos@veronicasalamanca.com
+  (gratuito, sin necesidad de cuenta — solo hay que confirmar el primer email
+  que llegue, ver comentario junto al formulario más abajo).
+- Se añadió un enlace de WhatsApp personal (wa.me) como contacto para
+  dudas, replicando el patrón de CTA de todo el sitio. El enlace de
+  acceso al GRUPO de WhatsApp de participantes NO va aquí — se entrega
+  tras el pago, gestionado aparte, para no dar acceso sin pagar.
+============================================================ -->
+
+<header class="nav">
+  <div class="brandmark">
+    <img src="arquenza-logo.png" alt="Arquenza">
+    <div>
+      <div class="word">Arquenza</div>
+      <div class="breadcrumb">veronicasalamanca.com</div>
+    </div>
+  </div>
+  <div class="menu-btn"><span></span></div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow-pill">UNA EXPERIENCIA DE ARQUENZA</div>
+  <h1>Practicar Renacimiento</h1>
+  <p class="sub">31 días para mirar esas partes de ti que escondes, que te avergüenzan, y volver a vivir desde un lugar más verdadero.</p>
+  <div class="btn-row inline">
+    <a href="#inscripcion" class="btn btn-white">Reservar mi plaza</a>
+    <a href="#inscripcion" class="btn btn-gold">Ver detalles</a>
+  </div>
+  <div class="plazas-note">Solo 20 plazas — grupo cerrado con acompañamiento real</div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">Nacimiento</div>
+    <h2 class="section-title">Nace de algo real, no de una idea</h2>
+    <p class="lead">Empecé este proceso sola, en agosto de 2023. Lo viví de nuevo sola en 2024. En 2025, por primera vez, lo viví acompañada: tres mujeres recorrimos juntas esos 31 días. No fue perfecto. Hubo resistencias, silencios, días en los que ni siquiera pude grabar el audio. Y aun así, ninguna salió igual de como entró.</p>
+    <div class="card">
+      <p>Este agosto reabro ese recorrido — reconstruido, cuidado, con acompañamiento estructurado — para un grupo pequeño que quiera vivir lo mismo: reconocer, atravesar e integrar las partes de sí que ha aprendido a ocultar.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--panel);">
+  <div class="container">
+    <div class="eyebrow">El recorrido</div>
+    <h2 class="section-title">Un recorrido de 5 momentos</h2>
+    <div class="grid5">
+      <div class="fase"><div class="ring"><div class="dot" style="background:var(--sage);"></div></div><div class="n">Días 1-7</div><h4>Preparar el espacio</h4><p>Bajar el ruido, crear seguridad</p></div>
+      <div class="fase"><div class="ring"><div class="dot" style="background:#d9a6a0;"></div></div><div class="n">Días 8-14</div><h4>Mirar lo oculto</h4><p>Reconocer máscaras y silencios</p></div>
+      <div class="fase"><div class="ring"><div class="dot" style="background:var(--lavender);"></div></div><div class="n">Días 15-21</div><h4>Atravesar</h4><p>Dar voz a lo contenido</p></div>
+      <div class="fase"><div class="ring"><div class="dot" style="background:#c8c07a;"></div></div><div class="n">Días 22-28</div><h4>Recuperar</h4><p>Límites, deseo, poder personal</p></div>
+      <div class="fase"><div class="ring"><div class="dot" style="background:#8fb3ac;"></div></div><div class="n">Días 29-31</div><h4>Renacer y sostener</h4><p>Integrar y elegir</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="eyebrow">La oferta</div>
+    <h2 class="section-title">Qué incluye</h2>
+    <div class="price-card">
+      <div class="label">Precio</div>
+      <div class="amount">147€</div>
+      <ul>
+        <li>31 audios diarios</li>
+        <li>El ritual especial Portal 8/8 (y otros momentos de ritual a lo largo del mes)</li>
+        <li>Grupo de WhatsApp con acompañamiento real</li>
+        <li>Encuentro de apertura y de cierre en directo</li>
+        <li>Acceso de por vida al contenido</li>
+      </ul>
+      <a href="#inscripcion" class="btn btn-sage" style="display:block;">Reservar mi plaza</a>
+    </div>
+
+    <h3 style="text-align:center;font-size:17px;color:var(--sage-dark);font-weight:600;margin-top:46px;font-family:'Poppins',sans-serif;">Calendario de acceso</h3>
+    <table class="cal">
+      <tr><th>Fechas</th><th>Condición</th></tr>
+      <tr><td>Ahora – 12 agosto</td><td>147€ — se puede entrar y adaptarse al recorrido</td></tr>
+      <tr><td>12 agosto, 20:00h</td><td><strong>Cierre definitivo de plazas</strong> — coincidiendo con el eclipse solar total en Leo</td></tr>
+    </table>
+    <p style="text-align:center;font-size:13px;color:var(--muted);max-width:480px;margin:0 auto;font-family:'Poppins',sans-serif;">A partir del 13 de agosto ya no se puede entrar: el acompañamiento real solo puede sostener adaptaciones durante la primera fase del recorrido.</p>
+  </div>
+</section>
+
+<section style="background:var(--panel);">
+  <div class="container">
+    <div class="eyebrow">Antes de empezar</div>
+    <h2 class="section-title">Qué debes preparar tú</h2>
+    <p class="lead">Esto no está incluido — es tuyo, y así debe ser: un espacio que ya es solo para este proceso.</p>
+    <div class="prep-list">
+      <p>· Un cuaderno físico, dedicado solo a este proceso</p>
+      <p>· Uno o dos bolígrafos</p>
+      <p>· Una vela</p>
+      <p>· Agua</p>
+      <p>· Todo lo demás es opcional — para algunos rituales puntuales se avisará del material necesario unos días antes</p>
+    </div>
+  </div>
+</section>
+
+<section id="inscripcion">
+  <div class="container">
+    <div class="eyebrow">Siguiente paso</div>
+    <h2 class="section-title">Reserva tu plaza</h2>
+    <p class="lead">Solo 20 plazas. Completa tus datos, realiza el pago y envía el comprobante a Verónica. Tras verificarlo, recibirás el acceso privado al grupo.</p>
+
+
+    <div class="payment-steps">
+      <h3>Cómo completar tu inscripción</h3>
+      <ol>
+        <li>Rellena y envía el formulario.</li>
+        <li>Serás redirigida a Wise para realizar el pago de 147 €.</li>
+        <li>Envía el comprobante por WhatsApp a Verónica.</li>
+        <li>Cuando el pago esté verificado, recibirás el enlace privado del grupo.</li>
+      </ol>
+    </div>
+
+    <!-- Formulario conectado vía FormSubmit.co → escribenos@veronicasalamanca.com
+         IMPORTANTE: la primera vez que alguien envíe el formulario, FormSubmit
+         mandará un email de confirmación a esa dirección — hay que abrirlo y
+         pulsar "activar" para que a partir de ahí lleguen todos los envíos
+         directos, sin más pasos. Es gratuito y no requiere cuenta.
+         Si prefieres otro proveedor (Web3Forms, Typeform, etc.) o gestionar
+         el pago desde aquí directamente, dímelo y lo cambio. -->
+    <form action="https://formsubmit.co/escribenos@veronicasalamanca.com" method="POST">
+      <input type="hidden" name="_subject" value="Nueva reserva · Practicar Renacimiento">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://wise.com/pay/r/ci00s0zFSg-i87g">
+      <input type="hidden" name="_autoresponse" value="Gracias por reservar tu plaza en Practicar Renacimiento. Realiza el pago de 147 € aquí: https://wise.com/pay/r/ci00s0zFSg-i87g Después, envía el comprobante por WhatsApp a Verónica: https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20ya%20he%20realizado%20el%20pago%20de%20Practicar%20Renacimiento.%20Te%20env%C3%ADo%20el%20comprobante%20para%20que%20puedas%20confirmar%20mi%20plaza. En cuanto se verifique el pago, recibirás el enlace privado para acceder al grupo.">
+      <input type="hidden" name="Programa" value="Practicar Renacimiento">
+      <input type="hidden" name="Importe" value="147 €">
+      <input type="hidden" name="Enlace de pago enviado" value="https://wise.com/pay/r/ci00s0zFSg-i87g">
+      <input type="hidden" name="Proceso de acceso" value="Pendiente de comprobante y verificación manual">
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="Nombre" autocomplete="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+
+      <label for="whatsapp">WhatsApp (para el grupo de acompañamiento)</label>
+      <input type="tel" id="whatsapp" name="WhatsApp" autocomplete="tel" required>
+
+      <label for="conociste">¿Cómo llegaste a Practicar Renacimiento?</label>
+      <select id="conociste" name="Cómo llegó" required>
+        <option value="" selected disabled>Selecciona una opción</option>
+        <option>Instagram</option>
+        <option>WhatsApp / recomendación</option>
+        <option>Ya conocía a Verónica</option>
+        <option>Otro</option>
+      </select>
+
+      <label style="text-transform:none;letter-spacing:0;font-size:13px;font-weight:400;display:flex;gap:10px;align-items:flex-start;">
+        <input type="checkbox" name="Consentimiento" value="Aceptado" required
+          style="width:auto;margin-top:4px;">
+        <span>Acepto que mis datos se utilicen para gestionar mi inscripción, el pago y el acceso al programa.</span>
+      </label>
+
+      <button type="submit" class="btn btn-sage">Continuar al pago</button>
+      <p class="secure-note">Después del pago, envía el comprobante a Verónica para confirmar tu plaza.</p>
+    </form>
+
+    <!--
+      FLUJO CONFIGURADO:
+      1. FormSubmit envía los datos al correo de administración.
+      2. FormSubmit responde a la participante con el enlace de Wise.
+      3. La participante es redirigida a Wise al enviar el formulario.
+      4. El enlace privado del canal debe enviarse únicamente tras verificar el pago.
+
+      IMPORTANTE:
+      Un HTML estático no puede verificar por sí solo que el pago se haya completado.
+      Para automatizar el paso 4 se necesita una integración segura del lado del servidor.
+      No colocar el enlace privado del canal dentro de este archivo público.
+    -->
+    <p class="whatsapp-note">¿Ya has pagado? <a href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20ya%20he%20realizado%20el%20pago%20de%20Practicar%20Renacimiento.%20Te%20env%C3%ADo%20el%20comprobante%20para%20que%20puedas%20confirmar%20mi%20plaza.">Envía aquí tu comprobante</a><br>¿Tienes dudas antes de reservar? <a href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20por%20Practicar%20Renacimiento.%20Tengo%20una%20duda%20antes%20de%20apuntarme.">Escríbeme por WhatsApp</a></p>
+  </div>
+</section>
+
+<section style="background:var(--panel);">
+  <div class="container">
+    <div class="eyebrow">Preguntas frecuentes</div>
+    <h2 class="section-title">Resolvemos dudas</h2>
+    <div class="faq"><h4>¿Es terapia?</h4><p>No. Es un espacio guiado de trabajo personal, no un tratamiento clínico. Si estás atravesando un proceso de salud mental que requiere apoyo profesional, este programa no lo sustituye.</p></div>
+    <div class="faq"><h4>¿Necesito experiencia previa?</h4><p>No. Solo disposición a mirar, a tu ritmo.</p></div>
+    <div class="faq"><h4>¿Hasta cuándo puedo entrar?</h4><p>Hasta el 12 de agosto a las 20:00h. El acompañamiento aún puede adaptarse a ti mientras estemos en la primera fase del recorrido.</p></div>
+    <div class="faq"><h4>¿Qué pasa después de los 31 días?</h4><p>Quien quiera seguir sosteniendo lo vivido tiene un camino natural hacia Equilíbrate, sin ninguna presión de continuar.</p></div>
+  </div>
+</section>
+
+<footer>
+  <img src="arquenza-logo.png" alt="Arquenza">
+  <div class="top">Practicar Renacimiento · una experiencia de Arquenza</div>
+  <div>creada desde Aletia y QuintaVibración</div>
+  <div style="margin-top:14px;">Verónica Salamanca · www.veronicasalamanca.com</div>
+</footer>
+
+</body>
+</html>
