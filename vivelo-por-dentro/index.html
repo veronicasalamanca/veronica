@@ -16,7 +16,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
-<div class="season"><div class="container"><span>Del 1 al 15 de diciembre: Vívelo por dentro, tu retiro de bolsillo.</span><a href="../vivelo-por-dentro/index.html">Quiero entrar</a></div></div>
+<div class="season" data-open-from="2026-11-01T00:00:00+01:00" data-open-to="2026-12-05T23:59:59+01:00"><div class="container" data-when="open"><span>Vívelo por dentro, tu retiro de bolsillo: 15 días, 15 minutos, 15 €. Inscripciones hasta el 5 de diciembre.</span><a href="../vivelo-por-dentro/index.html">Quiero entrar</a></div><div class="container" data-when="closed" hidden><span>Calendario de Adviento: un relato y una práctica cada día de diciembre, 11 €.</span><a href="../calendario-adviento/index.html">Me apunto</a></div></div>
 <header class="nav"><div class="container">
   <a class="logo" href="../index.html"><img src="../img/logo-visual.png" alt="Verónica Salamanca" width="146" height="56"></a>
   <nav aria-label="Principal"><ul><li><a href="../index.html">Inicio</a></li><li><a href="../sobre-mi/index.html">Sobre mí</a></li><li><a href="../servicios/index.html">Servicios</a></li></ul></nav>
@@ -29,7 +29,7 @@
     <h1>Tu retiro de bolsillo.</h1>
     <p class="lead">Vívelo por dentro: 15 días para volver a ti sin moverte de tu vida.</p>
     <p class="trio">15 días, 15 minutos al día, 15 €.</p>
-    <p class="when">Del 1 al 15 de diciembre. Directos el 1 y el 10, a las 19:00.</p>
+    <p class="when">Del 1 al 15 de diciembre. Directos el 1 y el 10, a las 19:00. Inscripciones hasta el 5 de diciembre.</p>
     <div class="actions"><a class="btn btn--primary" href="#entrar">Quiero vivirlo</a><a class="btn" href="https://wa.me/34655355826">Tengo dudas</a></div>
   </div>
   <figure><img src="../img/cuadernillo.jpg" alt="Portada del cuaderno Vívelo por dentro" width="760" height="1075" fetchpriority="high"></figure>
@@ -58,7 +58,10 @@
   </div>
 </div></section>
 
-<section class="buy" id="entrar" style="padding-top:var(--space-2xl)"><div class="container"><div>
+<section class="buy" id="entrar" style="padding-top:var(--space-2xl)" data-open-from="2026-11-01T00:00:00+01:00" data-open-to="2026-12-05T23:59:59+01:00"><div class="container"><div data-when="closed" hidden>
+  <div class="intro"><h2>Inscripciones cerradas.</h2><p>Vívelo por dentro ya ha empezado. Del 10 al 15 de diciembre se abre la venta de la mentoría Equilíbrate.</p></div>
+  <div><div class="actions" style="margin-top:0"><a class="btn btn--primary" href="../servicios/index.html#mentoria">Ver la mentoría</a><a class="btn" href="../calendario-adviento/index.html">Calendario de Adviento</a></div></div>
+</div><div data-when="open">
   <div class="intro"><h2>Reserva tu sitio.</h2><p>Déjame tus datos y elige tu opción. En la página siguiente tienes los datos para el pago y, cuando lo recibo, te escribo por privado para darte la bienvenida y el acceso al grupo.</p></div>
   <form class="form" data-web3 data-product="vivelo-15" data-next="../pago/index.html" novalidate>
     <input type="hidden" name="access_key" value="43b54598-7374-4307-9475-081954be2eac"><input type="hidden" name="subject" value="Nueva compra: Vívelo por dentro"><input type="hidden" name="from_name" value="Web Verónica Salamanca"><input type="hidden" name="producto" value="Vívelo por dentro"><input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
