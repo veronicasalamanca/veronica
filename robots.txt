@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /conecta-contigo/
-
-Sitemap: https://www.veronicasalamanca.com/sitemap.xml
+Disallow: /pago/
+Sitemap: https://veronicasalamanca.com/sitemap.xml
